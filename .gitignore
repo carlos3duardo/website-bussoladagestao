@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+#development
+/resources
+
 # testing
 /coverage
 
