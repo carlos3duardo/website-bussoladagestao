@@ -1,7 +1,6 @@
 @import 'tailwindcss';
 
 @theme inline {
-  --grid-layout: auto 1fr auto;
   --color-darken: #2b2b2b;
   --color-dark: #4a4a48;
   --color-brand: #fe5314;
