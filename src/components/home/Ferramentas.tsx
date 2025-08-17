@@ -9,25 +9,25 @@ const sistemas = [
     id: 1,
     title: 'Diagnóstico corporativo',
     description:
-      'Faça um auto-diagnóstico de sua empresa, avalie os pontos de melhoria, crie planos de ação e gerencie tudo no ambiente da plataforma.',
+      'Identifique com clareza os pontos de melhoria da sua empresa. Avalie processos, crie planos de ação e acompanhe tudo em uma plataforma prática e intuitiva.',
   },
   {
     id: 2,
     title: 'Desenvolvimento Humano',
     description:
-      'Avalie sua equipe, realize feedbacks com seus colaboradores e construa seus planos de desenvolvimento individual.',
+      'Invista na evolução da sua equipe. Realize avaliações, dê feedbacks estruturados e crie planos de desenvolvimento individual para cada colaborador.',
   },
   {
     id: 3,
     title: 'Universidade corporativa',
     description:
-      'Crie uma universidade corporativa para sua organização, construindo um ambiente de aprendizado a partir de conteúdos específicos para o desenvolvimento de seus colaboradores.',
+      'Ofereça treinamentos em um ambiente digital personalizado. Centralize conteúdos estratégicos para estimular aprendizado contínuo e fortalecer a cultura organizacional.',
   },
   {
     id: 4,
     title: 'Pesquisa de satisfação',
     description:
-      'Meça e acompanhe o grau de satisfação em tempo real do seu atendimento, para desenvolver um plano de lealdade para os seus clientes',
+      'Descubra em tempo real o quanto seus clientes estão satisfeitos. Acompanhe métricas, analise tendências e crie estratégias para fortalecer a lealdade.',
   },
 ] as const;
 
@@ -49,13 +49,15 @@ export function Ferramentas() {
           <HomeSection.Label>Nossas ferramentas</HomeSection.Label>
           <div className="flex flex-col items-start gap-4">
             <HomeSection.Headline className="w-full">
-              Recursos poderos para o seu negócio
+              Ferramentas inteligentes para transformar gestão em resultados
             </HomeSection.Headline>
             <HomeSection.Description className="w-full">
-              Não fique limitado à planilhas. Nossas ferramentas ajudam a
-              automatizar tarefas e aumentar a produtividade. São sistemas
-              desenvolvidos sob medida para enfrentar os desafios da gestão
-              presentem em seu negócio.
+              Superar os limites das planilhas é o primeiro passo para a
+              inovação. Nossos sistemas foram pensados para automatizar
+              processos, aumentar a produtividade e dar à sua empresa mais
+              eficiência. Cada ferramenta é desenvolvida sob medida para
+              enfrentar os reais desafios de gestão e potencializar seus
+              resultados.
             </HomeSection.Description>
           </div>
         </header>

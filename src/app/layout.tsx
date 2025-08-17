@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { Inter, Rubik } from 'next/font/google';
 
 import { Footer, Header } from '@/components';
+import { ScreenSizeViewer } from '@/components/ui';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -33,6 +34,7 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <ScreenSizeViewer />
       </body>
     </html>
   );

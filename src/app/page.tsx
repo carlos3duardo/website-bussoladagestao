@@ -3,6 +3,7 @@ import {
   Clientes,
   Depoimentos,
   Ferramentas,
+  Metricas,
   NossosServicos,
 } from '@/components/home';
 import { Destaques } from '@/components/home/Destaques';
@@ -19,6 +20,7 @@ export default function Home() {
         <Clientes />
         <Ferramentas />
         <Depoimentos />
+        <Metricas />
       </main>
     </>
   );
