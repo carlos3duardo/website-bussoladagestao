@@ -2,8 +2,6 @@ import Image from 'next/image';
 
 import { HomeSection } from '@/components/ui';
 
-import background from './assets/images/bg-charts.svg';
-
 const features = [
   {
     iconUrl: '/images/icons/statistical-analysis.svg',
@@ -37,14 +35,7 @@ const features = [
 
 export function NossosServicos() {
   return (
-    <HomeSection.Root className="bg-slate-100">
-      <Image
-        src={background}
-        width={1920}
-        height={1280}
-        className="absolute top-0 left-0 h-full w-full object-cover"
-        alt=""
-      />
+    <HomeSection.Root className="bg-slate-100 bg-[url(/images/bg-chart-2.svg)] bg-bottom bg-no-repeat">
       <div className="relative container mx-auto flex flex-col gap-20">
         <header className="flex flex-col items-start gap-4">
           <HomeSection.Label>Serviços</HomeSection.Label>
@@ -66,7 +57,7 @@ export function NossosServicos() {
           {features.map(({ title, description, iconUrl }, key) => (
             <div
               key={title}
-              className="flex flex-col gap-6 rounded-md bg-white/70 p-8 text-black/80 shadow-md md:data-[even=true]:-mt-12 md:data-[even=true]:mb-12"
+              className="flex flex-col gap-6 rounded-md bg-white/60 p-8 text-black/80 shadow-md backdrop-blur-[2px] md:data-[even=true]:-mt-12 md:data-[even=true]:mb-12"
               data-even={key % 2 !== 0}
             >
               <figure>
