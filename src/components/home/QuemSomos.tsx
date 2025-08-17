@@ -44,7 +44,7 @@ export function QuemSomos() {
   }, []);
 
   return (
-    <HomeSection.Root className="bg-darken">
+    <HomeSection.Root className="bg-darken overflow-hidden">
       <div
         data-slot="bussola-moldura"
         className="absolute top-0 right-0 w-3/4 translate-x-1/4 -translate-y-1/4 lg:top-[50%] lg:left-0 lg:w-1/2 lg:-translate-y-1/2"

@@ -82,7 +82,7 @@ export function Clientes() {
 
   return (
     <HomeSection.Root className="bg-slate-200">
-      <div className="mx-auto w-[480px] md:w-[768px] lg:w-[1024px] xl:w-[1280px] 2xl:w-[1536px]">
+      <div className="mx-auto w-[480px] md:w-[680px] lg:w-[960px] xl:w-[1020px] 2xl:w-[1366px]">
         <Swiper
           slidesPerView={2}
           spaceBetween={8}
@@ -92,7 +92,7 @@ export function Clientes() {
           }}
           loop
           breakpoints={{
-            '768': {
+            '960': {
               slidesPerView: 3,
               spaceBetween: 32,
             },

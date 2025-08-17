@@ -33,7 +33,7 @@ const sistemas = [
 
 export function Ferramentas() {
   return (
-    <HomeSection.Root className="flex min-h-screen flex-col justify-between overflow-hidden bg-white">
+    <HomeSection.Root className="flex min-h-screen flex-col justify-between gap-8 overflow-hidden bg-white">
       <figure className="absolute top-0 right-0 bottom-0 left-0">
         <Image
           src={backgroundImage}
