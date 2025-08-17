@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { HomeSection } from '@/components/ui';
 
-import backgroundImage from './assets/images/bg-sistema-05.png';
+import backgroundImage from './assets/images/bg-sistema-04.png';
 
 const sistemas = [
   {
@@ -67,7 +67,7 @@ export function Ferramentas() {
           {sistemas.map(({ id, title, description }) => (
             <li
               key={id}
-              className="flex gap-4 rounded-md bg-white/70 p-6 shadow-md backdrop-blur-[2px]"
+              className="flex gap-4 rounded-md bg-white/80 p-6 shadow-md backdrop-blur-[2px]"
             >
               <figure className="pt-2">
                 <Image

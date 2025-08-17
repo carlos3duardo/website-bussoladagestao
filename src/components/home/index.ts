@@ -6,6 +6,7 @@ import { Ferramentas } from './Ferramentas';
 import { Metricas } from './Metricas';
 import { NossosServicos } from './NossosServicos';
 import { QuemSomos } from './QuemSomos';
+import { TesteGratis } from './TesteGratis';
 
 export {
   AreaDeAtuacao,
@@ -16,4 +17,5 @@ export {
   Metricas,
   NossosServicos,
   QuemSomos,
+  TesteGratis,
 };
