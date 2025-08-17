@@ -1,0 +1,9 @@
+.mySwiper :global(.swiper-wrapper) {
+  align-items: stretch;
+}
+.mySwiper :global(.swiper-slide) {
+  height: auto;
+}
+.mySwiper {
+  height: auto;
+}
