@@ -17,6 +17,8 @@
   --color-primary-800: #9d1f0f;
   --color-primary-900: #7e1d10;
   --color-primary-950: #440a06;
+
+  --aspect-vertical-banner: 9/12;
 }
 
 @layer base {
