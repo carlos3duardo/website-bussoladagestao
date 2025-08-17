@@ -1,11 +1,27 @@
-import { Footer, Header } from '@/components';
+import {
+  AreaDeAtuacao,
+  Clientes,
+  Depoimentos,
+  Ferramentas,
+  Metricas,
+  NossosServicos,
+} from '@/components/home';
+import { Destaques } from '@/components/home/Destaques';
+import { QuemSomos } from '@/components/home/QuemSomos';
 
 export default function Home() {
   return (
-    <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
-      <Header />
-      <main className="bg-slate-300 p-4">main</main>
-      <Footer />
-    </div>
+    <>
+      <Destaques />
+      <main>
+        <QuemSomos />
+        <NossosServicos />
+        <AreaDeAtuacao />
+        <Clientes />
+        <Ferramentas />
+        <Depoimentos />
+        <Metricas />
+      </main>
+    </>
   );
 }

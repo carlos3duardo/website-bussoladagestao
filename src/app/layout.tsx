@@ -3,6 +3,9 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Inter, Rubik } from 'next/font/google';
 
+import { Footer, Header } from '@/components';
+import { ScreenSizeViewer } from '@/components/ui';
+
 const inter = Inter({
   variable: '--font-inter',
   subsets: ['latin'],
@@ -26,7 +29,12 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${rubik.variable} ${inter.variable} antialiased`}>
-        {children}
+        <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
+          <Header />
+          {children}
+          <Footer />
+        </div>
+        <ScreenSizeViewer />
       </body>
     </html>
   );
