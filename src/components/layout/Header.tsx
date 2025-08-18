@@ -112,7 +112,7 @@ export function Header() {
               className="h-[60px] w-[162px]"
             />
           </figure>
-          <div className="opacity-0" ref={ctaRef}>
+          <div className="hidden opacity-0 md:block" ref={ctaRef}>
             <Link
               href="/"
               className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"

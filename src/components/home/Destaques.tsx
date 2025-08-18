@@ -89,7 +89,7 @@ export function Destaques() {
                 />
                 <div className="absolute top-0 left-0 h-full w-full bg-black opacity-50" />
               </figure>
-              <div className="relative container mx-auto flex flex-col items-start gap-4">
+              <div className="relative container mx-auto flex flex-col items-start gap-4 px-4">
                 <h3
                   data-slot="label"
                   className={twMerge(
@@ -112,7 +112,7 @@ export function Destaques() {
                 <h2
                   data-slot="title"
                   className={twMerge(
-                    'w-full text-6xl font-bold tracking-tight text-white lg:w-1/2',
+                    'w-full text-4xl font-bold tracking-tight text-white md:text-6xl lg:w-1/2',
                     activeIndex === index
                       ? 'animate__animated animate__fadeIn'
                       : '',
