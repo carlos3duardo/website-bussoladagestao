@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { HomeSection } from '@/components/ui';
 
-import backgroundImage from './assets/images/bg-sistema-04.png';
+import backgroundImage from './assets/images/bg-sistema-07.jpg';
 
 const sistemas = [
   {
@@ -33,7 +33,7 @@ const sistemas = [
 
 export function Ferramentas() {
   return (
-    <HomeSection.Root className="flex min-h-screen flex-col justify-between gap-8 overflow-hidden bg-white">
+    <HomeSection.Root className="bg-darken flex min-h-screen flex-col justify-between gap-8 overflow-hidden text-white">
       <figure className="absolute top-0 right-0 bottom-0 left-0">
         <Image
           src={backgroundImage}
@@ -43,7 +43,8 @@ export function Ferramentas() {
           className="min-h-screen object-cover"
         />
       </figure>
-      <div className="absolute right-0 bottom-0 left-0 h-1/2 bg-linear-to-t from-white/70 to-white/0" />
+      <div className="absolute top-0 right-0 bottom-0 left-0 bg-black opacity-30" />
+      <div className="absolute right-0 bottom-0 left-0 h-1/2 bg-linear-to-t from-black/40 to-black/0" />
       <div className="relative container mx-auto">
         <header className="flex w-full flex-col items-start gap-4 lg:w-1/2">
           <HomeSection.Label>Nossas ferramentas</HomeSection.Label>
@@ -67,7 +68,7 @@ export function Ferramentas() {
           {sistemas.map(({ id, title, description }) => (
             <li
               key={id}
-              className="flex gap-4 rounded-md bg-white/80 p-6 shadow-md backdrop-blur-[2px]"
+              className="bg-darken/80 flex gap-4 rounded-md p-6 shadow-md backdrop-blur-[2px]"
             >
               <figure className="pt-2">
                 <Image
