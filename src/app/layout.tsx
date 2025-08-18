@@ -1,4 +1,5 @@
 import './globals.css';
+import './animations.css';
 
 import type { Metadata } from 'next';
 import { Inter, Rubik } from 'next/font/google';
