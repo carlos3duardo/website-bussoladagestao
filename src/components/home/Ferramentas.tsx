@@ -2,7 +2,7 @@ import Image from 'next/image';
 
 import { HomeSection } from '@/components/ui';
 
-import backgroundImage from './assets/images/bg-sistema-07.jpg';
+import backgroundImage from './assets/images/bg-sistema-09.jpg';
 
 const sistemas = [
   {

@@ -67,7 +67,7 @@ export function Destaques() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         effect={'fade'}
-        className="h-[calc(100dvh-120px)] w-screen"
+        className="h-[calc(100dvh-90px)] w-screen lg:h-[calc(100dvh-120px)]"
         autoplay={{
           delay: 6000,
           disableOnInteraction: false,

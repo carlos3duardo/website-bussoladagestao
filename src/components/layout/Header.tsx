@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 
+import { MobileMenu } from '../ui/main-menu';
+
 gsap.registerPlugin(useGSAP);
 
 const menu = [
@@ -112,13 +114,27 @@ export function Header() {
               className="h-[60px] w-[162px]"
             />
           </figure>
-          <div className="hidden opacity-0 md:block" ref={ctaRef}>
+          <div
+            className="hidden opacity-0 lg:flex lg:items-center lg:gap-4"
+            ref={ctaRef}
+          >
             <Link
               href="/"
               className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"
             >
               Agende uma demonstração
             </Link>
+
+            <Link
+              href="https://idp.bussoladagestao.com.br"
+              target="_blank"
+              className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"
+            >
+              Login
+            </Link>
+          </div>
+          <div className="lg:hidden">
+            <MobileMenu />
           </div>
         </div>
       </div>
