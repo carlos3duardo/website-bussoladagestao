@@ -105,15 +105,17 @@ export function Header() {
     <header>
       <div className="bg-darken flex h-[90px] items-center">
         <div className="container mx-auto flex items-center justify-between px-6">
-          <figure className="opacity-0" ref={logoRef}>
-            <Image
-              src="/images/logotipo-darkmode.png"
-              width={1750}
-              height={647}
-              alt="Bussola da Gestão"
-              className="h-[60px] w-[162px]"
-            />
-          </figure>
+          <Link href="/" className="block">
+            <figure className="opacity-0" ref={logoRef}>
+              <Image
+                src="/images/logotipo-darkmode.png"
+                width={1750}
+                height={647}
+                alt="Bussola da Gestão"
+                className="h-[60px] w-[162px]"
+              />
+            </figure>
+          </Link>
           <div
             className="hidden opacity-0 lg:flex lg:items-center lg:gap-4"
             ref={ctaRef}
