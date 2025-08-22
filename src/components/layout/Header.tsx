@@ -36,17 +36,17 @@ const menu = [
 const socialnetworks = [
   {
     title: 'Istagram',
-    href: '#',
+    href: 'https://www.instagram.com/bussoladagestao',
     iconUrl: '/images/brands/instagram.svg',
   },
   {
     title: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/company/bussola-da-gestao',
     iconUrl: '/images/brands/linkedin.svg',
   },
   {
     title: 'Youtube',
-    href: '#',
+    href: 'https://www.youtube.com/@bussolacast',
     iconUrl: '/images/brands/youtube.svg',
   },
 ];
@@ -164,6 +164,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   className="group hover:bg-primary-500 flex h-9 w-9 items-center justify-center rounded"
+                  target="_blank"
                 >
                   <Image
                     src={item.iconUrl}

@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="bg-darken text-sm text-white/60">
       <div className="container mx-auto flex flex-col items-center justify-between gap-4 py-6 lg:flex-row lg:items-end">
         <div className="left font-medium text-white/60">
-          <p>
+          <p className="text-center">
             {new Date().getFullYear()} &copy; Bússola da Gestão. Todos os
             direitos reservados.
           </p>

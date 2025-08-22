@@ -22,6 +22,7 @@ const testes = [
     ],
     cta: 'Quero avaliar minha empresa',
     image: bannerDiagnostico,
+    url: '/autodiagnostico',
   },
   {
     id: 2,
@@ -35,6 +36,7 @@ const testes = [
     ],
     cta: 'Quero avaliar minha equipe',
     image: bannerTestePerfil,
+    url: '/servicos/teste-perfil',
   },
 ] as const;
 
@@ -82,8 +84,8 @@ export function TesteGratis() {
                     ))}
                   </ul>
                   <Link
-                    href="/"
-                    className="border-primary-500 bg-primary-500/20 hover:bg-primary-500 mt-4 flex w-full items-center justify-center rounded-md border py-3 text-center font-semibold"
+                    href={teste.url}
+                    className="border-primary-500 bg-primary-500/20 hover:bg-primary-500 mt-4 flex w-full items-center justify-center rounded-md border py-3 text-center font-semibold text-white"
                   >
                     {teste.cta}
                   </Link>

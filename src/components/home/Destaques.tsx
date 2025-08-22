@@ -109,65 +109,71 @@ export function Destaques() {
                   {destaque.description}
                 </h3>
 
-                <h2
-                  data-slot="title"
-                  className={twMerge(
-                    'w-full text-4xl font-bold tracking-tight text-white md:text-6xl lg:w-1/2',
-                    activeIndex === index
-                      ? 'animate__animated animate__fadeIn'
-                      : '',
-                  )}
-                  style={{
-                    animationDelay: '500ms',
-                    animationDuration: '600ms',
-                  }}
-                >
-                  {destaque.title}
-                </h2>
-
-                <p
-                  data-slot="subtitle"
-                  className={twMerge(
-                    'text-lg font-medium text-white lg:w-1/3',
-                    activeIndex === index
-                      ? 'animate__animated animate__fadeIn'
-                      : '',
-                  )}
-                  style={{
-                    animationDelay: '600ms',
-                    animationDuration: '600ms',
-                  }}
-                >
-                  {destaque.subtitle}
-                </p>
-
-                <div
-                  data-slot="actions"
-                  className={twMerge(
-                    'flex items-center gap-10',
-                    activeIndex === index
-                      ? 'animate__animated animate__fadeIn'
-                      : '',
-                  )}
-                  style={{
-                    animationDelay: '700ms',
-                    animationDuration: '600ms',
-                  }}
-                >
-                  <Link
-                    href="/"
-                    className="bg-primary-500 hover:bg-darken rounded px-9 py-4.5 text-sm font-semibold text-white uppercase"
+                <span className="block overflow-hidden">
+                  <h2
+                    data-slot="title"
+                    className={twMerge(
+                      'w-full text-4xl font-bold tracking-tight text-white md:text-6xl lg:w-1/2',
+                      activeIndex === index
+                        ? 'animate__animated animate__fadeInUp'
+                        : '',
+                    )}
+                    style={{
+                      animationDelay: '500ms',
+                      animationDuration: '600ms',
+                    }}
                   >
-                    {destaque.primaryActionText}
-                  </Link>
+                    {destaque.title}
+                  </h2>
+                </span>
 
-                  <Link
-                    href="/"
-                    className="hover:bg-primary-500 hover:ring-primary-500 rounded bg-white/10 px-9 py-4.5 text-sm font-semibold text-white uppercase ring ring-white/30"
+                <span className="block overflow-hidden">
+                  <p
+                    data-slot="subtitle"
+                    className={twMerge(
+                      'text-lg font-medium text-white lg:w-1/2',
+                      activeIndex === index
+                        ? 'animate__animated animate__fadeInUp'
+                        : '',
+                    )}
+                    style={{
+                      animationDelay: '600ms',
+                      animationDuration: '600ms',
+                    }}
                   >
-                    {destaque.secondaryActionText}
-                  </Link>
-                </div>
+                    {destaque.subtitle}
+                  </p>
+                </span>
+
+                <span className="block overflow-hidden">
+                  <div
+                    data-slot="actions"
+                    className={twMerge(
+                      'flex items-center gap-10',
+                      activeIndex === index
+                        ? 'animate__animated animate__fadeInUp'
+                        : '',
+                    )}
+                    style={{
+                      animationDelay: '700ms',
+                      animationDuration: '600ms',
+                    }}
+                  >
+                    <Link
+                      href="/"
+                      className="bg-primary-500 hover:bg-darken rounded px-9 py-4.5 text-sm font-semibold text-white uppercase"
+                    >
+                      {destaque.primaryActionText}
+                    </Link>
+
+                    <Link
+                      href="/"
+                      className="hover:bg-primary-500 hover:ring-primary-500 rounded bg-white/10 px-9 py-4.5 text-sm font-semibold text-white uppercase ring ring-white/30"
+                    >
+                      {destaque.secondaryActionText}
+                    </Link>
+                  </div>
+                </span>
               </div>
             </section>
           </SwiperSlide>
