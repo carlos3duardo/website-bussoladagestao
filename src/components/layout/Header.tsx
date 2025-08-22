@@ -6,6 +6,8 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useRef } from 'react';
 
+import { MobileMenu } from '../ui/main-menu';
+
 gsap.registerPlugin(useGSAP);
 
 const menu = [
@@ -34,17 +36,17 @@ const menu = [
 const socialnetworks = [
   {
     title: 'Istagram',
-    href: '#',
+    href: 'https://www.instagram.com/bussoladagestao',
     iconUrl: '/images/brands/instagram.svg',
   },
   {
     title: 'LinkedIn',
-    href: '#',
+    href: 'https://www.linkedin.com/company/bussola-da-gestao',
     iconUrl: '/images/brands/linkedin.svg',
   },
   {
     title: 'Youtube',
-    href: '#',
+    href: 'https://www.youtube.com/@bussolacast',
     iconUrl: '/images/brands/youtube.svg',
   },
 ];
@@ -103,22 +105,38 @@ export function Header() {
     <header>
       <div className="bg-darken flex h-[90px] items-center">
         <div className="container mx-auto flex items-center justify-between px-6">
-          <figure className="opacity-0" ref={logoRef}>
-            <Image
-              src="/images/logotipo-darkmode.png"
-              width={1750}
-              height={647}
-              alt="Bussola da Gestão"
-              className="h-[60px] w-[162px]"
-            />
-          </figure>
-          <div className="opacity-0" ref={ctaRef}>
+          <Link href="/" className="block">
+            <figure className="opacity-0" ref={logoRef}>
+              <Image
+                src="/images/logotipo-darkmode.png"
+                width={1750}
+                height={647}
+                alt="Bussola da Gestão"
+                className="h-[60px] w-[162px]"
+              />
+            </figure>
+          </Link>
+          <div
+            className="hidden opacity-0 lg:flex lg:items-center lg:gap-4"
+            ref={ctaRef}
+          >
             <Link
               href="/"
               className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"
             >
               Agende uma demonstração
             </Link>
+
+            <Link
+              href="https://idp.bussoladagestao.com.br"
+              target="_blank"
+              className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"
+            >
+              Login
+            </Link>
+          </div>
+          <div className="lg:hidden">
+            <MobileMenu />
           </div>
         </div>
       </div>
@@ -146,6 +164,7 @@ export function Header() {
                 <Link
                   href={item.href}
                   className="group hover:bg-primary-500 flex h-9 w-9 items-center justify-center rounded"
+                  target="_blank"
                 >
                   <Image
                     src={item.iconUrl}

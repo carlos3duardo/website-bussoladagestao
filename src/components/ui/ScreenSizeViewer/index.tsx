@@ -8,7 +8,7 @@ export default function ScreenSizeViewer() {
   }
 
   const defaultStyle =
-    'hidden items-center rounded-md bg-white px-2 py-1 text-xs uppercase font-medium text-slate-600 fixed top-2 right-2 z-50';
+    'hidden items-center rounded-md bg-white px-2 py-1 text-xs uppercase font-medium text-slate-600 fixed bottom-2 right-2 z-50';
   return (
     <div>
       <span className={twMerge(defaultStyle, 'block md:hidden')}>sm</span>

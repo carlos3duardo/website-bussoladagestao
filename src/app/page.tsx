@@ -1,6 +1,7 @@
 import {
   AreaDeAtuacao,
   Clientes,
+  Contato,
   Depoimentos,
   Ferramentas,
   Metricas,
@@ -23,6 +24,7 @@ export default function Home() {
         <Depoimentos />
         <Metricas />
         <TesteGratis />
+        <Contato />
       </main>
     </>
   );
