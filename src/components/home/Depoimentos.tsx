@@ -1,7 +1,6 @@
 'use client';
 
 import { Quote } from 'lucide-react';
-import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -25,10 +24,10 @@ type ViewProps = {
   avatarUrl: string;
 };
 
-function Depoimento({ testimonial, author, company, avatarUrl }: ViewProps) {
+function Depoimento({ testimonial, author, company }: ViewProps) {
   const [expandido, setExpandido] = useState(false);
 
-  const limit = 360;
+  const limit = 420;
   const precisaCortar = testimonial.length > limit;
   const textoExibido =
     !expandido && precisaCortar
@@ -66,7 +65,7 @@ function Depoimento({ testimonial, author, company, avatarUrl }: ViewProps) {
             <Quote size={36} />
           </span>
         </figure>
-        <div>
+        <div className="flex-1">
           <strong className="text-lg font-semibold">{author}</strong>
           <br />
           <span className="text-primary-500">{company}</span>
@@ -84,7 +83,7 @@ export function Depoimentos() {
       [
         {
           id: '4ea6a91e-30fb-4faf-8365-28a4c59cb478',
-          testimonial: `Antes de utilizarmos a Perfforme, enfrentávamos
+          testimonial: `"Antes de utilizarmos a Perfforme, enfrentávamos
             dificuldades como a falta de acompanhamento adequado, ausência
             de feedbacks e avaliações que muitas vezes não eram realizadas.
             Conhecemos a ferramenta através do antigo PPQ e da parceria com
@@ -102,14 +101,14 @@ export function Depoimentos() {
             Hoje, podemos dizer que evoluímos: antes utilizávamos muito o
             papel para controles manuais e, agora, contamos com uma
             solução digital que se tornou parte essencial do nosso
-            processo de gestão de pessoas.`,
+            processo de gestão de pessoas."`,
           author: 'Francielton Oliveira',
           company: 'Casatudo',
           avatarUrl: '/images/avatars/avatar-01.jpg',
         },
         {
           id: '52230cf8-ba21-4a8a-b459-9c9be563ae30',
-          testimonial: `A plataforma da Bússola da Gestão nos proporcionou a
+          testimonial: `"A plataforma da Bússola da Gestão nos proporcionou a
             automatização do nosso processo de Avaliação de Desempenho
             por Competências desde Abril de 2023.
             <br /><br />
@@ -122,34 +121,38 @@ export function Depoimentos() {
             <br /><br />
             A dedicação e profissionalismo da equipe de desenvolvimento e
             suporte tem demonstrado até agora são realmente notáveis
-            e estamos muito satisfeitos com a parceira.`,
+            e estamos muito satisfeitos com a parceira."`,
           author: 'Mônica Cimonetti',
           company: 'Grupo BRF1',
           avatarUrl: '/images/avatars/avatar-02.jpg',
         },
         {
           id: '97a96a3e-dee2-4bb2-a6b3-938232d97fdf',
-          testimonial:
-            '"We know a diverse workforce and an inclusive culture matters to our clients. Through philanthropy and employee volunteerism, we support the diverse communities where our employees live."',
-          author: 'John Doe',
-          company: 'Company Name',
+          testimonial: `"Participar das mentorias coletivas está sendo
+            uma experiência extremamente enriquecedora. O mais
+            interessante desse formato é a criação de um ambiente
+            seguro onde todos podemos compartilhar
+            nossas experiências e aprender uns com os outros.
+            Isso cria um clima de confiança, de apoio entre todos
+            os participantes. Eles têm sido muito eficazes em
+            direcionar nossas conversas e feedbacks para um
+            crescimento mais real, mais realista."`,
+          author: 'Antonio Clerton',
+          company: 'Gestor Administrativo',
           avatarUrl: '/images/avatars/avatar-03.jpg',
         },
         {
           id: 'b38c3779-487e-48e3-90aa-ecfe2caebdc2',
-          testimonial:
-            '"Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere."',
-          author: 'John Doe',
-          company: 'Company Name',
+          testimonial: `"Estou aqui para parabenizar o trabalho
+            realizado pela Bússola da Gestão, e todos os que
+            estão envolvidos neste incrível projeto.
+            <br /><br />
+            Recentemente participei de uma mentoria coletiva, que reuniu
+            líderes, gestores e empresários para falar sobre temas
+            conexos ao mundo de liderança e ao dos negócios."`,
+          author: 'Alysson Onofre',
+          company: 'Gestor de Pessoas e Treinador Empresarial',
           avatarUrl: '/images/avatars/avatar-04.jpg',
-        },
-        {
-          id: 'b81a19a1-6641-4cbd-9165-072eb7fd2fe4',
-          testimonial:
-            '"Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer nunc posuere."',
-          author: 'John Doe',
-          company: 'Company Name',
-          avatarUrl: '/images/avatars/avatar-06.jpg',
         },
       ].toSorted(() => Math.random() - 0.5),
     );
