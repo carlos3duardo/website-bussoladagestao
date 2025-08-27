@@ -23,7 +23,7 @@ const destaques = [
     description: 'O capital mais importante na sua empresa',
     primaryActionText: 'Saiba mais',
     primaryActionLink: '/',
-    secondaryActionText: 'Entre em contato',
+    secondaryActionText: 'Contato',
     secondaryActionLink: '/',
     backgroundImageUrl: '/images/bg-destaque-equipe-discutindo.jpg',
   },
@@ -36,7 +36,7 @@ const destaques = [
     description: 'O primeiro passo para a excelência',
     primaryActionText: 'Saiba mais',
     primaryActionLink: '/',
-    secondaryActionText: 'Entre em contato',
+    secondaryActionText: 'Contato',
     secondaryActionLink: '/',
     backgroundImageUrl: '/images/bg-destaque-executivo-com-laptop.jpg',
   },
@@ -49,7 +49,7 @@ const destaques = [
     description: 'Aprendizado sem fronteiras',
     primaryActionText: 'Saiba mais',
     primaryActionLink: '/',
-    secondaryActionText: 'Entre em contato',
+    secondaryActionText: 'Contato',
     secondaryActionLink: '/',
     backgroundImageUrl: '/images/bg-destaque-mulher-com-laptop.jpg',
   },
@@ -67,7 +67,7 @@ export function Destaques() {
         pagination={{ clickable: true }}
         scrollbar={{ draggable: true }}
         effect={'fade'}
-        className="h-[calc(100dvh-90px)] w-screen lg:h-[calc(100dvh-120px)]"
+        className="h-[calc(100dvh-90px)] lg:h-[calc(100dvh-120px)]"
         autoplay={{
           delay: 6000,
           disableOnInteraction: false,
@@ -79,7 +79,7 @@ export function Destaques() {
       >
         {destaques.map((destaque, index) => (
           <SwiperSlide key={destaque.id}>
-            <section className="relative flex h-full w-full items-center justify-center bg-slate-400">
+            <section className="relative flex h-full w-full items-center justify-center bg-slate-400 px-4">
               <figure className="absolute top-0 left-0 h-full w-full">
                 <Image
                   src={destaque.backgroundImageUrl}
@@ -89,11 +89,11 @@ export function Destaques() {
                 />
                 <div className="absolute top-0 left-0 h-full w-full bg-black opacity-50" />
               </figure>
-              <div className="relative container mx-auto flex flex-col items-start gap-4 px-4">
+              <div className="relative container mx-auto flex flex-col gap-4">
                 <h3
                   data-slot="label"
                   className={twMerge(
-                    'flex items-center gap-2 rounded-full py-0.5 pr-3 pl-0.5 text-[11px] leading-0 font-bold text-white uppercase ring ring-white/50',
+                    'flex items-center gap-2 self-start rounded-full py-0.5 pr-3 pl-0.5 text-[11px] leading-0 font-bold text-white uppercase ring ring-white/50',
                     activeIndex === index
                       ? 'animate__animated animate__fadeIn'
                       : '',
@@ -113,7 +113,7 @@ export function Destaques() {
                   <h2
                     data-slot="title"
                     className={twMerge(
-                      'w-full text-4xl font-bold tracking-tight text-white md:text-6xl lg:w-1/2',
+                      'w-full text-4xl font-bold tracking-tight text-balance text-white md:text-6xl lg:w-1/2',
                       activeIndex === index
                         ? 'animate__animated animate__fadeInUp'
                         : '',
@@ -131,7 +131,7 @@ export function Destaques() {
                   <p
                     data-slot="subtitle"
                     className={twMerge(
-                      'text-lg font-medium text-white lg:w-1/2',
+                      'text-lg font-medium text-balance text-white lg:w-2/3 xl:w-1/2',
                       activeIndex === index
                         ? 'animate__animated animate__fadeInUp'
                         : '',
@@ -145,11 +145,11 @@ export function Destaques() {
                   </p>
                 </span>
 
-                <span className="block overflow-hidden">
+                <span className="block overflow-hidden md:self-start">
                   <div
                     data-slot="actions"
                     className={twMerge(
-                      'flex items-center gap-10',
+                      'flex w-full gap-4 md:w-auto',
                       activeIndex === index
                         ? 'animate__animated animate__fadeInUp'
                         : '',
@@ -161,14 +161,14 @@ export function Destaques() {
                   >
                     <Link
                       href="/"
-                      className="bg-primary-500 hover:bg-darken rounded px-9 py-4.5 text-sm font-semibold text-white uppercase"
+                      className="bg-primary-500 hover:bg-darken flex w-1/2 items-center justify-center rounded px-9 py-4.5 text-sm font-semibold text-nowrap text-white uppercase"
                     >
                       {destaque.primaryActionText}
                     </Link>
 
                     <Link
                       href="/"
-                      className="hover:bg-primary-500 hover:ring-primary-500 rounded bg-white/10 px-9 py-4.5 text-sm font-semibold text-white uppercase ring ring-white/30"
+                      className="hover:bg-primary-500 hover:ring-primary-500 flex w-1/2 items-center justify-center rounded bg-white/10 px-9 py-4.5 text-center text-sm font-semibold text-nowrap text-white uppercase ring ring-white/30"
                     >
                       {destaque.secondaryActionText}
                     </Link>

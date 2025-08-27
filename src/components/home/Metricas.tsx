@@ -37,16 +37,14 @@ export function Metricas() {
         />
       </figure>
       <div className="bg-darken absolute top-0 left-0 h-full w-full opacity-40" />
-      <div className="relative container mx-auto flex flex-col gap-16">
+      <div className="relative container mx-auto flex flex-col gap-16 px-4">
         <header className="flex w-full flex-col items-start gap-4 lg:w-1/2">
           <HomeSection.Label>Nossos números</HomeSection.Label>
           <div className="flex flex-col items-start gap-4">
-            <HomeSection.Headline className="w-full">
-              Experiência que se
-              <br />
-              transforma em números
+            <HomeSection.Headline className="w-full text-balance">
+              Experiência que se transforma em números
             </HomeSection.Headline>
-            <HomeSection.Description>
+            <HomeSection.Description className="text-balance">
               Ao longo dos anos, acumulamos um vasto conhecimento e experiência
               prática, traduzidos em números que refletem nossa dedicação e
               capacidade de resolver desafios reais. Cada projeto, cada hora

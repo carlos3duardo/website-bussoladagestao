@@ -81,8 +81,8 @@ export function Clientes() {
   }, []);
 
   return (
-    <HomeSection.Root className="bg-slate-200">
-      <div className="mx-auto w-[480px] md:w-[680px] lg:w-[960px] xl:w-[1020px] 2xl:w-[1366px]">
+    <HomeSection.Root className="bg-slate-200 py-12 lg:py-24">
+      <div className="mx-auto w-[380px] md:w-[680px] lg:w-[960px] xl:w-[1020px] 2xl:w-[1366px]">
         <Swiper
           slidesPerView={2}
           spaceBetween={8}
@@ -115,7 +115,7 @@ export function Clientes() {
                   width={180}
                   height={80}
                   alt=""
-                  className="object-scale-down opacity-40 brightness-0 transition duration-300 ease-in-out hover:opacity-100 hover:brightness-100"
+                  className="h-[60px] w-[135px] object-scale-down opacity-40 brightness-0 transition duration-300 ease-in-out hover:opacity-100 hover:brightness-100 lg:h-[80px] lg:w-[180px]"
                 />
               </figure>
             </SwiperSlide>

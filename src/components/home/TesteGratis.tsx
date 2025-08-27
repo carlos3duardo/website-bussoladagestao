@@ -43,14 +43,14 @@ const testes = [
 export function TesteGratis() {
   return (
     <HomeSection.Root>
-      <div className="relative container mx-auto flex flex-col gap-20">
+      <div className="relative container mx-auto flex flex-col gap-20 px-4">
         <header className="flex flex-col items-center gap-4">
           <HomeSection.Label>Teste grátis</HomeSection.Label>
           <div className="flex flex-col items-center gap-4">
-            <HomeSection.Headline className="max-w-[720px] text-center">
+            <HomeSection.Headline className="max-w-[720px] text-center text-balance">
               Começe agora a superar desafios e alcance o sucesso
             </HomeSection.Headline>
-            <HomeSection.Description className="w-full max-w-[600px] text-center">
+            <HomeSection.Description className="w-full max-w-[600px] text-center text-balance">
               Faça um autodiagnóstico gratuito e descubra o seu potencial de
               crescimento de sua empresa.
             </HomeSection.Description>
@@ -70,7 +70,9 @@ export function TesteGratis() {
                 />
                 <div className="from-darken to-darken/20 absolute top-0 left-0 h-full w-full bg-linear-to-t" />
                 <div className="relative p-6 text-white">
-                  <h4 className="text-3xl font-bold">{teste.title}</h4>
+                  <h4 className="text-3xl font-bold text-balance">
+                    {teste.title}
+                  </h4>
                   <p>{teste.description}</p>
                   <ul className="my-3 flex flex-col gap-1">
                     {teste.beneficios.map((beneficio) => (

@@ -161,10 +161,10 @@ export function Depoimentos() {
   return (
     <HomeSection.Root>
       <div className="relative container mx-auto flex flex-col gap-20">
-        <header className="flex flex-col items-center gap-4">
+        <header className="flex flex-col items-center gap-4 px-4">
           <HomeSection.Label>Depoimentos</HomeSection.Label>
           <div className="flex flex-col items-center gap-4">
-            <HomeSection.Headline>
+            <HomeSection.Headline className="text-center">
               O que as pessoas falam de nós
             </HomeSection.Headline>
             <HomeSection.Description className="w-full max-w-[600px] text-center">
@@ -174,7 +174,7 @@ export function Depoimentos() {
             </HomeSection.Description>
           </div>
         </header>
-        <div className="mx-auto w-[480px] overflow-hidden px-4 md:w-[740px] xl:w-[1024px] 2xl:w-[1280px]">
+        <div className="mx-auto w-[380px] overflow-hidden px-4 md:w-[740px] xl:w-[1024px] 2xl:w-[1280px]">
           <Swiper
             slidesPerView={1}
             spaceBetween={8}

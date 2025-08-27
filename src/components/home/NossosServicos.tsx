@@ -70,7 +70,7 @@ export function NossosServicos() {
   return (
     <HomeSection.Root className="section-servicos bg-slate-100 bg-[url(/images/bg-chart-2.svg)] bg-bottom bg-no-repeat">
       <div className="relative container mx-auto flex flex-col gap-8 md:gap-16">
-        <header className="flex flex-col items-start gap-4">
+        <header className="flex flex-col items-start gap-4 px-4">
           <HomeSection.Label>Serviços</HomeSection.Label>
           <div className="grid grid-cols-1 gap-4 lg:grid-cols-2">
             <HomeSection.Headline>
