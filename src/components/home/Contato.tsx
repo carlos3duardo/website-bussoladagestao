@@ -16,7 +16,7 @@ export function Contato() {
         className="absolute top-0 left-0 h-full w-full object-cover"
       />
       <div className="absolute top-0 left-0 h-full w-full bg-black opacity-60" />
-      <div className="relative container mx-auto grid grid-cols-1 gap-16 lg:grid-cols-2">
+      <div className="relative container mx-auto grid grid-cols-1 gap-16 px-4 lg:grid-cols-2">
         <header className="flex flex-col items-center gap-4 lg:items-start">
           <HomeSection.Label>Fale conosco</HomeSection.Label>
           <div className="flex flex-col items-center gap-4 lg:items-start">

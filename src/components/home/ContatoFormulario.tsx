@@ -70,7 +70,10 @@ export function ContatoFormulario() {
       className="flex flex-col gap-4"
     >
       <fieldset className="grid grid-cols-1 gap-4 md:grid-cols-2">
-        <div data-slot="input-control">
+        <div
+          data-slot="input-control"
+          className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
+        >
           <div
             data-error={!!errors.nome}
             className="flex h-12 items-center rounded-md border border-white/40 px-3 data-[error=true]:border-red-400"
@@ -91,7 +94,10 @@ export function ContatoFormulario() {
           )}
         </div>
 
-        <div data-slot="input-control">
+        <div
+          data-slot="input-control"
+          className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
+        >
           <div
             data-error={!!errors.empresa}
             className="flex h-12 items-center rounded-md border border-white/40 px-3 data-[error=true]:border-red-400"
@@ -112,7 +118,10 @@ export function ContatoFormulario() {
           )}
         </div>
 
-        <div data-slot="input-control">
+        <div
+          data-slot="input-control"
+          className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
+        >
           <div
             data-error={!!errors.email}
             className="flex h-12 items-center rounded-md border border-white/40 px-3 data-[error=true]:border-red-400"
@@ -133,7 +142,10 @@ export function ContatoFormulario() {
           )}
         </div>
 
-        <div data-slot="input-control">
+        <div
+          data-slot="input-control"
+          className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1"
+        >
           <div
             data-error={!!errors.whatsapp}
             className="flex h-12 items-center rounded-md border border-white/40 px-3 data-[error=true]:border-red-400"
