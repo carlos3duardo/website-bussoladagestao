@@ -21,7 +21,7 @@ export function Contato() {
           <HomeSection.Label>Fale conosco</HomeSection.Label>
           <div className="flex flex-col items-center gap-4 lg:items-start">
             <HomeSection.Headline>Entre em contato</HomeSection.Headline>
-            <HomeSection.Description className="w-full max-w-[600px] text-center lg:text-left">
+            <HomeSection.Description className="w-full max-w-[600px] text-center text-balance lg:text-left">
               Preencha o formulário e descubra como podemos ajudar sua empresa a
               evoluir.
             </HomeSection.Description>
@@ -29,7 +29,7 @@ export function Contato() {
         </header>
 
         <div>
-          <div className="bg-darken/90 rounded-lg p-12">
+          <div className="bg-darken/90 rounded-lg p-4 lg:p-8 xl:p-12">
             <ContatoFormulario />
           </div>
         </div>

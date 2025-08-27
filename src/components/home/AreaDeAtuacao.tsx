@@ -54,7 +54,9 @@ export function AreaDeAtuacao() {
         <header className="flex flex-col items-center gap-4">
           <HomeSection.Label>Onde ja atuamos</HomeSection.Label>
           <div className="flex flex-col items-center gap-4">
-            <HomeSection.Headline>Nossa área de atuação</HomeSection.Headline>
+            <HomeSection.Headline className="text-center">
+              Nossa área de atuação
+            </HomeSection.Headline>
             <HomeSection.Description className="w-full max-w-[600px] text-center">
               Nossos produtos e serviços atendem organizações dos mais diversos
               segmentos. Não há limites para onde chegar, se sua empresa estiver

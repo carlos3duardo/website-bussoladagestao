@@ -46,7 +46,7 @@ export function Ferramentas() {
       <div className="absolute top-0 right-0 bottom-0 left-0 bg-black opacity-30" />
       <div className="absolute right-0 bottom-0 left-0 h-1/2 bg-linear-to-t from-black/40 to-black/0" />
       <div className="relative container mx-auto">
-        <header className="flex w-full flex-col items-start gap-4 lg:w-1/2">
+        <header className="flex w-full flex-col items-start gap-4 px-4 lg:w-1/2">
           <HomeSection.Label>Nossas ferramentas</HomeSection.Label>
           <div className="flex flex-col items-start gap-4">
             <HomeSection.Headline className="w-full">
