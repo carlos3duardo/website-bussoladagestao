@@ -174,7 +174,7 @@ export function Depoimentos() {
             </HomeSection.Description>
           </div>
         </header>
-        <div className="mx-auto w-[480px] md:w-[768px] lg:w-[1024px] xl:w-[1280px]">
+        <div className="mx-auto w-[480px] overflow-hidden px-4 md:w-[740px] xl:w-[1024px] 2xl:w-[1280px]">
           <Swiper
             slidesPerView={1}
             spaceBetween={8}
@@ -186,7 +186,7 @@ export function Depoimentos() {
             breakpoints={{
               '768': {
                 slidesPerView: 2,
-                spaceBetween: 32,
+                spaceBetween: 24,
               },
               '1024': {
                 slidesPerView: 3,

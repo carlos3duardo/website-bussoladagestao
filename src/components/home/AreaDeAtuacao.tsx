@@ -50,7 +50,7 @@ const areas = [
 export function AreaDeAtuacao() {
   return (
     <HomeSection.Root className="bg-slate-50">
-      <div className="relative container mx-auto flex flex-col gap-20">
+      <div className="relative container mx-auto flex flex-col gap-20 px-4">
         <header className="flex flex-col items-center gap-4">
           <HomeSection.Label>Onde ja atuamos</HomeSection.Label>
           <div className="flex flex-col items-center gap-4">

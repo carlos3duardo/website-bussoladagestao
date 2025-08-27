@@ -64,7 +64,7 @@ export function Ferramentas() {
         </header>
       </div>
       <div className="relative container mx-auto">
-        <ul className="grid grid-cols-1 gap-6 lg:grid-cols-2 xl:grid-cols-4">
+        <ul className="grid grid-cols-1 gap-6 px-4 lg:grid-cols-2 xl:grid-cols-4">
           {sistemas.map(({ id, title, description }) => (
             <li
               key={id}

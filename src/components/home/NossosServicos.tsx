@@ -1,3 +1,8 @@
+'use client';
+
+import { useGSAP } from '@gsap/react';
+import { gsap } from 'gsap';
+import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 import Image from 'next/image';
 
 import { HomeSection } from '@/components/ui';
@@ -34,8 +39,36 @@ const features = [
 ] as const;
 
 export function NossosServicos() {
+  useGSAP(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.to('.servico-item', {
+      // backgroundColor: 'rgba(0, 0, 0, 0.2)',
+      duration: 3,
+      scrollTrigger: {
+        trigger: '.servico-item',
+        start: 'top 80%',
+        markers: false,
+      },
+    });
+
+    // gsap.to('.servico-item', {
+    //   rotation: 360,
+    //   ease: 'none',
+    //   stagger: 0.1,
+    //   scrollTrigger: {
+    //     trigger: '.section.boxes',
+    //     start: 'top top',
+    //     end: '+=100%',
+    //     scrub: true,
+    //     pin: true,
+    //     markers: true,
+    //   },
+    // });
+  });
+
   return (
-    <HomeSection.Root className="bg-slate-100 bg-[url(/images/bg-chart-2.svg)] bg-bottom bg-no-repeat">
+    <HomeSection.Root className="section-servicos bg-slate-100 bg-[url(/images/bg-chart-2.svg)] bg-bottom bg-no-repeat">
       <div className="relative container mx-auto flex flex-col gap-8 md:gap-16">
         <header className="flex flex-col items-start gap-4">
           <HomeSection.Label>Serviços</HomeSection.Label>
@@ -53,11 +86,11 @@ export function NossosServicos() {
           </div>
         </header>
 
-        <div className="mt-8 grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
+        <div className="mt-8 grid grid-cols-1 gap-12 px-4 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 xl:gap-12">
           {features.map(({ title, description, iconUrl }, key) => (
             <div
               key={title}
-              className="flex flex-col gap-6 rounded-md bg-white/60 p-8 text-black/80 shadow-md backdrop-blur-[2px] md:data-[even=true]:-mt-12 md:data-[even=true]:mb-12"
+              className="servico-item flex flex-col gap-6 rounded-md bg-white/60 p-8 text-black/80 shadow-md backdrop-blur-[2px] md:data-[even=true]:-mt-12 md:data-[even=true]:mb-12"
               data-even={key % 2 !== 0}
             >
               <figure>
