@@ -55,6 +55,28 @@ const destaques = [
   },
 ] as const;
 
+interface CtaButtonProps {
+  text: string;
+  linkUrl: string;
+  variant?: 'primary' | 'secondary';
+}
+
+function CtaButton({ text, linkUrl, variant = 'primary' }: CtaButtonProps) {
+  return (
+    <Link
+      href={linkUrl}
+      className={twMerge(
+        'flex items-center justify-center rounded-md px-9 py-4.5 text-sm font-semibold text-nowrap text-white uppercase hover:cursor-pointer',
+        variant === 'primary'
+          ? 'bg-primary-500 hover:bg-primary-700'
+          : 'bg-dark hover:bg-darken text-white',
+      )}
+    >
+      {text}
+    </Link>
+  );
+}
+
 export function Destaques() {
   const [activeIndex, setActiveIndex] = useState(0);
 
@@ -159,19 +181,16 @@ export function Destaques() {
                       animationDuration: '600ms',
                     }}
                   >
-                    <Link
-                      href="/"
-                      className="bg-primary-500 hover:bg-darken flex w-1/2 items-center justify-center rounded px-9 py-4.5 text-sm font-semibold text-nowrap text-white uppercase"
-                    >
-                      {destaque.primaryActionText}
-                    </Link>
-
-                    <Link
-                      href="/"
-                      className="hover:bg-primary-500 hover:ring-primary-500 flex w-1/2 items-center justify-center rounded bg-white/10 px-9 py-4.5 text-center text-sm font-semibold text-nowrap text-white uppercase ring ring-white/30"
-                    >
-                      {destaque.secondaryActionText}
-                    </Link>
+                    <CtaButton
+                      text={destaque.primaryActionText}
+                      linkUrl={destaque.primaryActionLink}
+                      variant="primary"
+                    />
+                    <CtaButton
+                      text={destaque.secondaryActionText}
+                      linkUrl={destaque.secondaryActionLink}
+                      variant="secondary"
+                    />
                   </div>
                 </span>
               </div>
