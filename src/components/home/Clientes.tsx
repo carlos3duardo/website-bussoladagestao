@@ -16,7 +16,7 @@ type ClienteProps = {
   image: string;
 };
 
-export function ClientesSwiper() {
+export function Clientes() {
   const [clientes, setClientes] = useState<ClienteProps[]>([]);
 
   useEffect(() => {
