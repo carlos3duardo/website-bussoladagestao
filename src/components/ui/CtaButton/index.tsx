@@ -6,6 +6,7 @@ interface CtaButtonProps {
   linkUrl: string;
   variant?: 'primary' | 'secondary';
   target?: string;
+  className?: string;
 }
 
 export function CtaButton({
@@ -13,17 +14,19 @@ export function CtaButton({
   linkUrl,
   variant = 'primary',
   target = '_self',
+  className,
 }: CtaButtonProps) {
   return (
     <Link
       href={linkUrl}
       data-variant="primary"
-      className={twMerge('relative hover:cursor-pointer')}
+      className={twMerge('relative hover:cursor-pointer', className)}
       target={target}
     >
       <span
         className={twMerge(
           'absolute top-0 left-0 h-full w-full rounded-md',
+
           variant === 'primary' && 'bg-primary-900',
           variant === 'secondary' && 'bg-darken',
         )}

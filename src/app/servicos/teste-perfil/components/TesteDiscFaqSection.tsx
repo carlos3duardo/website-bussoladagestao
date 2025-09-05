@@ -6,29 +6,29 @@ import { twMerge } from 'tailwind-merge';
 
 import { PageSection } from '@/components/ui';
 
-export function FaqSection() {
+export function TesteDiscFaqSection() {
   const [openFAQ, setOpenFAQ] = useState(-1);
 
   const faqs = [
     {
-      q: 'Quanto tempo leva a aplicação',
-      a: 'Geralmente 10–15 minutos. O questionário é objetivo e direto, com escala de quatro níveis de aderência.',
+      q: 'O que é o teste DISC?',
+      a: 'O DISC é uma metodologia de análise comportamental que identifica quatro estilos principais: Dominância, Influência, Estabilidade e Conformidade. Ele ajuda a entender como cada pessoa age, se comunica e toma decisões.',
     },
     {
-      q: 'Como é calculado o score',
-      a: 'Cada pergunta vale pontos por nível de aderência. As notas são agregadas por dimensão (Estratégia, Clientes & Mercado, Produtos & Processos, Financeiro, Pessoas e Informação) e formam um score geral.',
+      q: 'O teste pode ser aplicado em empresas?',
+      a: 'Sim! A empresa recebe um link exclusivo para que seus colaboradores respondam o questionário. No final, é gerado um relatório individual para cada pessoa e também um panorama comportamental da equipe.',
     },
     {
-      q: 'Para quem é indicado',
-      a: 'PMEs que buscam clareza de prioridades e tração, e também grandes empresas que desejam um termômetro ágil do modelo de negócio.',
+      q: 'Quanto tempo leva para responder?',
+      a: 'O teste é rápido e intuitivo, geralmente leva entre 10 a 15 minutos para ser concluído.',
     },
     {
-      q: 'O diagnóstico é inspirado no BMC',
-      a: 'Sim. É inspirado no Business Model Canvas (Strategyzer&reg;) e ampliado com dimensões de execução e gestão.',
+      q: 'Quem pode fazer o teste?',
+      a: 'Qualquer pessoa! Pode ser feito de forma individual para autoconhecimento ou em grupo no ambiente corporativo para melhorar a comunicação e o trabalho em equipe.',
     },
     {
-      q: 'Como é gerado o relatório de feedback',
-      a: 'Cada dimensão apresenta um score geral, e também uma tabela de notas por pergunta. O relatório tem uma introdução e conclusão, e também uma seção de recomendações, gerado pela nossa ferramenta de Inteligência Artificial.',
+      q: 'Receberei um relatório detalhado?',
+      a: 'Sim, ao final você recebe um relatório completo com pontos fortes, áreas de atenção e sugestões de como aplicar seu perfil no dia a dia.',
     },
   ] as const;
   return (
