@@ -22,7 +22,7 @@ const testes = [
     ],
     cta: 'Quero avaliar minha empresa',
     image: bannerDiagnostico,
-    url: '/autodiagnostico',
+    url: '/servicos/autodiagnostico/canvas-360',
   },
   {
     id: 2,

@@ -82,15 +82,20 @@ export function Clientes() {
 
   return (
     <HomeSection.Root className="bg-slate-200 py-12 lg:py-24">
-      <div className="mx-auto w-[380px] md:w-[680px] lg:w-[960px] xl:w-[1020px] 2xl:w-[1366px]">
+      <div className="relative mx-auto w-[380px] md:w-[680px] lg:w-[960px] xl:w-[1020px] 2xl:w-[1366px]">
+        <div className="absolute top-0 left-0 z-10 h-full w-24 bg-gradient-to-r from-slate-200 to-transparent" />
+        <div className="absolute top-0 right-0 z-10 h-full w-24 bg-gradient-to-l from-slate-200 to-transparent" />
         <Swiper
+          freeMode={true}
           slidesPerView={2}
-          spaceBetween={8}
+          spaceBetween={0}
           autoplay={{
-            delay: 4000,
+            delay: 0,
             disableOnInteraction: false,
+            waitForTransition: true,
           }}
           loop
+          speed={4000}
           breakpoints={{
             '960': {
               slidesPerView: 3,
@@ -107,8 +112,8 @@ export function Clientes() {
           }}
           modules={[Autoplay]}
         >
-          {clientes.map((cliente) => (
-            <SwiperSlide key={cliente.id}>
+          {clientes.concat(clientes).map((cliente, key) => (
+            <SwiperSlide key={key}>
               <figure className="flex h-[160px] items-center justify-center">
                 <Image
                   src={cliente.image}
