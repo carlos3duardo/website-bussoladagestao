@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 
 import { TesteDiscBeneficiosSection } from './components/TesteDiscBeneficiosSection';
-import { TesteDiscCallToActionSection } from './components/TesteDiscCallToActionSection';
 import { TesteDiscDescricao } from './components/TesteDiscDescricao';
 import { TesteDiscFaqSection } from './components/TesteDiscFaqSection';
+import { TesteDiscFormularioSection } from './components/TesteDiscFormularioSection';
 import { TesteDiscHero } from './components/TesteDiscHero';
 
 export const metadata: Metadata = {
@@ -37,7 +37,7 @@ export default async function Page() {
       <TesteDiscHero />
       <TesteDiscDescricao />
       <TesteDiscBeneficiosSection />
-      <TesteDiscCallToActionSection />
+      <TesteDiscFormularioSection />
       <TesteDiscFaqSection />
     </main>
   );

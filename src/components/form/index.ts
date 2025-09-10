@@ -1,3 +1,4 @@
-import { FormInput } from './FormInput';
+import { Input } from './Input';
+import { Select } from './Select';
 
-export { FormInput };
+export { Input, Select };
