@@ -1,9 +1,12 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
-import { CircleCheckBig } from 'lucide-react';
+import axios, { isAxiosError } from 'axios';
+import { CircleCheck, CircleCheckBig } from 'lucide-react';
+import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
+import { twMerge } from 'tailwind-merge';
 import z from 'zod';
 
 import { Input, Select } from '@/components/form';
@@ -28,27 +31,57 @@ const formSchema = z.object({
 });
 
 export function TesteDiscFormularioSection() {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   type FormData = z.infer<typeof formSchema>;
 
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    setError,
+    reset,
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
-  const onSubmit = (data: FormData) => {
-    console.log('Dados enviados:', data);
-    Swal.fire({
-      icon: 'success',
-      title: 'Pronto',
-      html: `Enviamos para o endereço de e-mail informado um link
+  async function formSubmit(data: FormData) {
+    try {
+      await axios.post('/api/disc', data);
+
+      setShowSuccessMessage(true);
+
+      reset();
+
+      setTimeout(() => {
+        setShowSuccessMessage(false);
+      }, 1000 * 10);
+    } catch (err) {
+      console.error(err);
+      if (isAxiosError(err)) {
+        const response = err.response;
+        const json = await response?.data;
+
+        setError('root.serverError', { message: json.message });
+
+        return;
+      }
+
+      setError('root.serverError', {
+        message:
+          'Não foi possível realizar a operação devido a um erro desconhecido.',
+      });
+
+      Swal.fire({
+        icon: 'error',
+        title: 'Pronto',
+        html: `Enviamos para o endereço de e-mail informado um link
             para a realização do teste, com mais intruções a seguir.`,
-      confirmButtonText: 'Fechar',
-      confirmButtonColor: '#fe5314',
-    });
-  };
+        confirmButtonText: 'Fechar',
+        confirmButtonColor: '#fe5314',
+      });
+    }
+  }
 
   return (
     <HomeSection.Root className="text-darken bg-primary-100">
@@ -87,13 +120,44 @@ export function TesteDiscFormularioSection() {
                 É simples
               </li>
             </ul>
+
+            <p className="text-darken/70 mt-8 text-sm text-balance">
+              Após o preenchimento, você receberá um link exclusivo para
+              compartilhar com sua equipe. Cada colaborador receberá seu
+              relatório individual, e você terá acesso ao panorama completo do
+              time.
+            </p>
           </div>
 
           <div data-slot="formulario" className="lg:col-span-7">
             <form
-              onSubmit={handleSubmit(onSubmit)}
-              className="flex flex-col gap-4 rounded-lg bg-white p-4 shadow lg:p-8 xl:p-12"
+              onSubmit={handleSubmit(formSubmit)}
+              className="relative flex flex-col gap-4 overflow-hidden rounded-lg bg-white p-4 shadow lg:p-8 xl:p-12"
             >
+              <div
+                data-show={showSuccessMessage}
+                className={twMerge(
+                  'absolute top-0 left-0 flex h-full w-full -translate-y-full items-center justify-center bg-emerald-100 transition-transform duration-[500ms] ease-in-out',
+                  'data-[show=true]:translate-y-0',
+                )}
+              >
+                <div className="flex flex-col items-center gap-2 p-12">
+                  <div>
+                    <CircleCheckBig size={32} />
+                  </div>
+                  <h4 className="font-bold">
+                    Recebemos sua requisição com sucesso!
+                  </h4>
+                  <p className="text-center text-balance">
+                    Enviamos um link para que você possa acompnar a realização
+                    dos testes DISC dos seus colaboradores.
+                  </p>
+                  <p className="text-center text-balance">
+                    Verifique sua caixa de entrada. Não esqueça também de
+                    verificar a caixa de spam.
+                  </p>
+                </div>
+              </div>
               <fieldset className="grid gap-4 md:grid-cols-2">
                 <div className="md:col-span-2">
                   <Input
@@ -142,7 +206,6 @@ export function TesteDiscFormularioSection() {
                   registration={register('uf')}
                   error={errors.uf?.message}
                   options={[
-                    { value: '', label: 'Selecione a UF' },
                     { value: 'AC', label: 'Acre' },
                     { value: 'AL', label: 'Alagoas' },
                     { value: 'AP', label: 'Amapá' },
@@ -177,7 +240,11 @@ export function TesteDiscFormularioSection() {
               <fieldset>
                 <button
                   type="submit"
-                  className="bg-primary-500 hover:bg-primary-700 flex h-12 items-center rounded px-5 font-medium text-white hover:cursor-pointer"
+                  className={twMerge(
+                    'bg-primary-500 hover:bg-primary-700 flex h-12 items-center rounded px-5 font-medium text-white hover:cursor-pointer',
+                    'disabled:opacity-50',
+                  )}
+                  disabled={isSubmitting}
                 >
                   Entrar
                 </button>

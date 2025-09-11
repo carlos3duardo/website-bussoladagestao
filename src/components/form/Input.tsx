@@ -22,14 +22,13 @@ export function Input({ label, error, registration, ...props }: InputProps) {
           {...registration}
           {...props}
           className={twMerge(
-            'w-full bg-transparent text-base font-medium placeholder-slate-400 outline-none disabled:cursor-not-allowed disabled:opacity-50',
+            'w-full bg-transparent text-base font-medium text-slate-600 outline-none placeholder:text-slate-400 disabled:cursor-not-allowed disabled:opacity-50',
           )}
           style={{
             // Remove o background amarelo do autocomplete
             WebkitBoxShadow: '0 0 0px 1000px white inset',
             boxShadow: '0 0 0px 1000px white inset',
-            WebkitTextFillColor: '#111827', // text-gray-900
-            caretColor: '#111827',
+            caretColor: 'var(--color-primary-500)',
           }}
         />
       </InputContainer>
