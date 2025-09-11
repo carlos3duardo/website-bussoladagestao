@@ -143,7 +143,7 @@ export function TesteDiscFormularioSection() {
               >
                 <div className="flex flex-col items-center gap-2 p-12">
                   <div>
-                    <CircleCheckBig size={32} />
+                    <CircleCheck size={32} />
                   </div>
                   <h4 className="font-bold">
                     Recebemos sua requisição com sucesso!
