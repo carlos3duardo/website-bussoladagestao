@@ -1,6 +1,7 @@
 'use server';
 
 import axios from 'axios';
+import * as jose from 'jose';
 
 import {
   API_CLIENT_ID,
@@ -15,9 +16,42 @@ export async function getApiClientAccessToken(): Promise<string> {
   const cachedToken = await redis.get(REDIS_KEY);
 
   if (cachedToken) {
-    return cachedToken;
+    if (isTokenExpired(cachedToken)) {
+      const { accessToken, expiresIn } = await createNewToken();
+
+      await redis.set(REDIS_KEY, accessToken, 'EX', expiresIn);
+
+      return accessToken;
+    }
   }
 
+  const { accessToken, expiresIn } = await createNewToken();
+
+  await redis.set(REDIS_KEY, accessToken, 'EX', expiresIn);
+
+  return accessToken;
+}
+
+function isTokenExpired(token: string) {
+  try {
+    const decoded = jose.decodeJwt(token);
+
+    if (!decoded.exp) return true;
+
+    const now = Math.floor(Date.now() / 1000);
+    return decoded.exp < now; // true = expirado, false = válido
+  } catch (err) {
+    console.error('Error decoding JWT:', err);
+    return true; // se não conseguir decodificar, considera inválido
+  }
+}
+
+type JwtProps = {
+  accessToken: string;
+  expiresIn: number;
+};
+
+async function createNewToken(): Promise<JwtProps> {
   const endpoint = `${API_URL}/oauth/token`;
 
   try {
@@ -37,11 +71,10 @@ export async function getApiClientAccessToken(): Promise<string> {
 
     const responseJson = (await response).data;
 
-    const { access_token: accessToken, expires_in: expiresIn } = responseJson;
-
-    await redis.set(REDIS_KEY, accessToken, 'EX', expiresIn);
-
-    return accessToken;
+    return {
+      accessToken: responseJson.access_token,
+      expiresIn: responseJson.expires_in,
+    };
   } catch (err) {
     console.log('Erro ao tentar gerar AccessToken', err);
     throw new AuthError('Falha ao obter token de acesso da API externa');
