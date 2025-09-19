@@ -1,6 +1,7 @@
 import axios from 'axios';
 
 import { API_URL } from '@/config/app';
+import { ApiTesteDiscInscricao } from '@/types';
 
 import { getApiClientAccessToken } from './accessToken';
 
@@ -11,7 +12,7 @@ interface Params {
   relations?: Relations[];
 }
 
-export async function getTesteDisc({ id, relations }: Params) {
+export async function getTesteDiscInscricao({ id, relations }: Params) {
   const accessToken = await getApiClientAccessToken();
 
   const response = await axios.get(`${API_URL}/trial/disc/${id}`, {
@@ -23,5 +24,5 @@ export async function getTesteDisc({ id, relations }: Params) {
     },
   });
 
-  return response.data;
+  return response.data as unknown as ApiTesteDiscInscricao;
 }

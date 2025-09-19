@@ -1,7 +1,9 @@
 'use client';
 
 import { zodResolver } from '@hookform/resolvers/zod';
+import axios, { isAxiosError } from 'axios';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useForm } from 'react-hook-form';
 import z from 'zod';
 
@@ -13,6 +15,8 @@ interface ComponentProps {
 }
 
 export function LoginForm({ teste }: ComponentProps) {
+  const router = useRouter();
+
   const formSchema = z.object({
     username: z.email({ message: 'Endereço de e-mail inválido' }),
     password: z.string().min(1, { message: 'Campo obrigatório' }),
@@ -23,13 +27,40 @@ export function LoginForm({ teste }: ComponentProps) {
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    setError,
+    formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
   async function formSubmit(data: FormData) {
-    console.log({ data });
+    const credenciais = {
+      testeId: teste.id,
+      ...data,
+    };
+
+    try {
+      const response = await axios.post('/api/disc/auth', credenciais);
+
+      if (response.status === 200) {
+        router.push(`/disc/${teste.id}/dashboard`);
+      }
+    } catch (err) {
+      console.error(err);
+      if (isAxiosError(err)) {
+        const response = err.response;
+        const json = await response?.data;
+
+        setError('root.serverError', { message: json.message });
+
+        return;
+      }
+
+      setError('root.serverError', {
+        message:
+          'Não foi possível realizar a operação devido a um erro desconhecido.',
+      });
+    }
   }
 
   return (
@@ -62,7 +93,9 @@ export function LoginForm({ teste }: ComponentProps) {
               error={errors.password?.message}
             />
 
-            <Button type="submit">Entrar</Button>
+            <Button type="submit" isLoading={isSubmitting}>
+              Entrar
+            </Button>
           </fieldset>
         </form>
       </div>

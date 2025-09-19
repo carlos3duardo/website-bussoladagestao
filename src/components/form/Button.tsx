@@ -1,9 +1,11 @@
 import clsx from 'clsx';
-import { ButtonHTMLAttributes } from 'react';
+import { ButtonHTMLAttributes, ElementType } from 'react';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   variant?: 'primary' | 'secondary' | 'danger';
   isLoading?: boolean;
+  icon?: ElementType;
+  iconPosition?: 'left' | 'right';
 };
 
 export function Button({
@@ -11,10 +13,12 @@ export function Button({
   isLoading = false,
   className,
   children,
+  icon: Icon,
+  iconPosition = 'left',
   ...props
 }: ButtonProps) {
   const baseStyles =
-    'w-full flex justify-center items-center h-12 px-4 rounded font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer';
+    'flex justify-center items-center gap-2 h-12 px-4 rounded font-medium transition focus:outline-none focus:ring-2 focus:ring-offset-1 disabled:opacity-60 disabled:cursor-not-allowed cursor-pointer';
 
   const variants = {
     primary:
@@ -33,7 +37,11 @@ export function Button({
       {isLoading ? (
         <span className="h-4 w-4 animate-spin rounded-full border-2 border-white border-t-transparent" />
       ) : (
-        children
+        <>
+          {Icon && iconPosition === 'left' && <Icon size={18} />}
+          {children}
+          {Icon && iconPosition === 'right' && <Icon size={18} />}
+        </>
       )}
     </button>
   );

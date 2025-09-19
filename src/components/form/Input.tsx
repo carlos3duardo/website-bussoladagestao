@@ -8,9 +8,16 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   label?: string;
   error?: string;
   registration: UseFormRegisterReturn;
+  className?: string;
 };
 
-export function Input({ label, error, registration, ...props }: InputProps) {
+export function Input({
+  label,
+  error,
+  registration,
+  className,
+  ...props
+}: InputProps) {
   return (
     <div className="flex w-full flex-col gap-1">
       {label && (
@@ -23,6 +30,7 @@ export function Input({ label, error, registration, ...props }: InputProps) {
           {...props}
           className={twMerge(
             'w-full bg-transparent text-base font-medium text-slate-600 outline-none placeholder:text-slate-400 disabled:cursor-not-allowed disabled:opacity-50',
+            className,
           )}
           style={{
             // Remove o background amarelo do autocomplete

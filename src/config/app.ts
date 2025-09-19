@@ -1,3 +1,5 @@
+export const USER_AGENT = 'Site Bussola da Gestao';
+
 const apiBaseUrl = 'https://api.bussoladagestao.com.br/v1';
 
 export const API_URL = process.env.API_URL || apiBaseUrl;

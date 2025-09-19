@@ -5,7 +5,7 @@ export function Header() {
   return (
     <header>
       <div className="bg-darken flex h-[90px] items-center">
-        <div className="container mx-auto flex items-center justify-between px-6">
+        <div className="mx-auto flex w-full max-w-7xl items-center justify-between px-6">
           <figure className="">
             <Image
               src="/images/logotipo-darkmode.png"

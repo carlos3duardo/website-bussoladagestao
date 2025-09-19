@@ -4,9 +4,9 @@ import type { Metadata } from 'next';
 import { Inter, Rubik } from 'next/font/google';
 
 import { ScreenSizeViewer } from '@/components/ui';
-import { SiteProvider } from '@/providers';
 
-import { Header } from './components';
+import AppProviders from '../providers';
+import { Footer, Header } from './components';
 
 const inter = Inter({
   variable: '--font-inter',
@@ -74,13 +74,14 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${rubik.variable} ${inter.variable} antialiased`}>
-        <SiteProvider>
+        <AppProviders>
           <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
             <Header />
-            {children}
+            <div className="px-4 py-4 2xl:py-6">{children}</div>
+            <Footer />
           </div>
           <ScreenSizeViewer />
-        </SiteProvider>
+        </AppProviders>
       </body>
     </html>
   );

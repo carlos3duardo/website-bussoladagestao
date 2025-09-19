@@ -8,6 +8,7 @@ import {
   API_CLIENT_SECRET,
   API_URL,
   REDIS_API_TOKEN_KEY as REDIS_KEY,
+  USER_AGENT,
 } from '@/config/app';
 import { AuthError } from '@/errors';
 import { redis } from '@/services';
@@ -65,7 +66,7 @@ async function createNewToken(): Promise<JwtProps> {
       },
       headers: {
         'Content-Type': 'application/json',
-        'User-Agent': 'Site Bússola da Gestão',
+        'User-Agent': USER_AGENT,
       },
     });
 
