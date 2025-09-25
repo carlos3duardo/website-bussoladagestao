@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 
-import { BannerCallToAction } from './components/BannerCallToAction';
 import { BeneficiosSection } from './components/BeneficiosSection';
+import { Canvas360Formulario } from './components/Canvas360Formulario';
 import { FaqSection } from './components/FaqSection';
 import { HeroSection } from './components/HeroSection';
 import { SobreSection } from './components/SobreSection';
@@ -37,7 +37,7 @@ export default async function Page() {
       <HeroSection />
       <SobreSection />
       <BeneficiosSection />
-      <BannerCallToAction />
+      <Canvas360Formulario />
       <FaqSection />
     </main>
   );

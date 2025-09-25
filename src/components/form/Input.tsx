@@ -9,6 +9,7 @@ type InputProps = InputHTMLAttributes<HTMLInputElement> & {
   error?: string;
   registration: UseFormRegisterReturn;
   className?: string;
+  containerClassName?: string;
 };
 
 export function Input({
@@ -16,6 +17,7 @@ export function Input({
   error,
   registration,
   className,
+  containerClassName,
   ...props
 }: InputProps) {
   return (
@@ -24,7 +26,7 @@ export function Input({
         <label className="text-sm font-medium text-gray-700">{label}</label>
       )}
 
-      <InputContainer error={!!error}>
+      <InputContainer className={containerClassName} error={!!error}>
         <input
           {...registration}
           {...props}

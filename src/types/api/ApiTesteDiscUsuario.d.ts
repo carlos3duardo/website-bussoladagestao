@@ -21,6 +21,31 @@ type PerfilProps = {
   cor: string;
 };
 
+type ResultadoPerfilProps = {
+  id: number;
+  nome: string;
+  descricao: string;
+  cor: string;
+  pontos: number;
+  proporcao: number;
+};
+
+type ResultadoProps = {
+  disc: ResultadoPerfilProps[];
+  analise: {
+    perfil: string;
+    resumo: string;
+    descricao: string;
+    adjetivos: string[];
+    comportamentos: string[];
+    forcas: string[];
+    fraquezas: string[];
+    animadores: string[];
+    desanimadores: string[];
+    adequacao: string;
+  };
+};
+
 export interface ApiTesteDiscUsuario {
   id: string;
   nome: string;
@@ -28,10 +53,10 @@ export interface ApiTesteDiscUsuario {
   whatsapp: string | null;
   cargo: string;
   conclusao: string | null;
-  resultado: unknown;
-  perfil: PerfilProps | null;
   inscricao: InscricaoProps;
   questoes: number;
   respostas: number;
   progresso: number;
+  perfil: PerfilProps | null;
+  resultado: ResultadoProps;
 }

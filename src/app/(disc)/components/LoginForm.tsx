@@ -8,13 +8,13 @@ import { useForm } from 'react-hook-form';
 import z from 'zod';
 
 import { Button, Input } from '@/components/form';
-import { ApiTesteDisc } from '@/types';
+import { ApiTesteDiscInscricao } from '@/types';
 
 interface ComponentProps {
-  teste: ApiTesteDisc;
+  inscricao: ApiTesteDiscInscricao;
 }
 
-export function LoginForm({ teste }: ComponentProps) {
+export function LoginForm({ inscricao }: ComponentProps) {
   const router = useRouter();
 
   const formSchema = z.object({
@@ -35,7 +35,7 @@ export function LoginForm({ teste }: ComponentProps) {
 
   async function formSubmit(data: FormData) {
     const credenciais = {
-      testeId: teste.id,
+      testeId: inscricao.id,
       ...data,
     };
 
@@ -43,7 +43,7 @@ export function LoginForm({ teste }: ComponentProps) {
       const response = await axios.post('/api/disc/auth', credenciais);
 
       if (response.status === 200) {
-        router.push(`/disc/${teste.id}/dashboard`);
+        router.push(`/disc/${inscricao.id}/dashboard`);
       }
     } catch (err) {
       console.error(err);
@@ -76,7 +76,7 @@ export function LoginForm({ teste }: ComponentProps) {
           />
         </figure>
         <form className="w-[360px] lg:py-8" onSubmit={handleSubmit(formSubmit)}>
-          <h2 className="text-base font-semibold">Olá, {teste.usuario}.</h2>
+          <h2 className="text-base font-semibold">Olá, {inscricao.usuario}.</h2>
           <p>Confirme o seu e-mail e a senha que recebeu.</p>
           <fieldset className="mt-4 flex flex-col gap-4">
             <Input

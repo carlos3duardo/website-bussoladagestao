@@ -1,6 +1,5 @@
 import Image from 'next/image';
 
-import Home from '@/app/page';
 import { HomeSection } from '@/components/ui';
 
 import backgroundImage from './assets/images/bg-metricas.jpg';

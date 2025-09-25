@@ -13,7 +13,7 @@ interface ProvidersProps {
 export default function AppProviders({ children }: ProvidersProps) {
   return (
     <QueryClientProvider client={queryClient}>
-      <SiteProvider>{children}</SiteProvider>;
+      <SiteProvider>{children}</SiteProvider>
     </QueryClientProvider>
   );
 }

@@ -1,4 +1,5 @@
 import { Copy, Link as LinkIcon, Users } from 'lucide-react';
+import { Metadata } from 'next';
 import Link from 'next/link';
 
 import { CardInfo } from '@/components/ui/CardInfo';
@@ -6,6 +7,12 @@ import { getTesteDiscInscricao } from '@/lib/api';
 import { firstName } from '@/lib/helpers';
 
 import { UsuarioTabela } from './components/UsuarioTabela';
+
+export const metadata: Metadata = {
+  title: 'Teste DISC',
+  description:
+    'Transformando negócios com educação e inovação. Junte-se a nós para alcançar novos patamares de sucesso.',
+};
 
 interface PageProps {
   params: Promise<{

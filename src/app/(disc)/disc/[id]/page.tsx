@@ -15,7 +15,7 @@ export default async function Page({ params }: PageProps) {
   return (
     <>
       <main className="flex items-center justify-center">
-        <LoginForm teste={testeDisc} />
+        <LoginForm inscricao={testeDisc} />
       </main>
     </>
   );

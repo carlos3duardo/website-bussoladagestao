@@ -46,7 +46,6 @@ function isTokenExpired(token: string) {
     return true; // se não conseguir decodificar, considera inválido
   }
 }
-
 type JwtProps = {
   accessToken: string;
   expiresIn: number;

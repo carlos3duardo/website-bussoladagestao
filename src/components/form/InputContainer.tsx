@@ -25,6 +25,7 @@ export function InputContainer({
       aria-disabled={disabled}
       data-size={size}
       className={twMerge(
+        'bg-white',
         'hover:border-primary-400 flex h-12 items-center rounded border border-slate-300 px-3',
         'focus-within:border-primary-500 focus-within:ring-primary-200 focus-within:ring-2',
         error === true &&
