@@ -1,9 +1,11 @@
 import { ElementType, ReactNode } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface CardInfoProps {
   label: string;
   description?: string;
   icon: ElementType;
+  iconClassName?: string;
   children: ReactNode;
 }
 
@@ -12,6 +14,7 @@ export function CardInfoDefault({
   description,
   icon: Icon,
   children,
+  iconClassName,
 }: CardInfoProps) {
   return (
     <div
@@ -29,7 +32,11 @@ export function CardInfoDefault({
       </div>
       <div data-slot="card-body" className="flex items-center gap-2">
         <figure className="bg-primary-100 flex h-12 w-12 items-center justify-center rounded-sm">
-          <Icon size={24} strokeWidth={2.5} className="text-primary-500/50" />
+          <Icon
+            size={24}
+            strokeWidth={2.5}
+            className={twMerge('text-primary-500/50', iconClassName)}
+          />
         </figure>
         <div
           data-slot="card-value"
