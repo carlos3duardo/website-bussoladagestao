@@ -1,35 +1,36 @@
-import { InputHTMLAttributes } from 'react';
+import { TextareaHTMLAttributes } from 'react';
 import { UseFormRegisterReturn } from 'react-hook-form';
 import { twMerge } from 'tailwind-merge';
 
 import { InputContainer } from './InputContainer';
 
-type InputProps = InputHTMLAttributes<HTMLInputElement> & {
+type TextAreaProps = TextareaHTMLAttributes<HTMLTextAreaElement> & {
   label?: string;
   error?: string;
-  registration: UseFormRegisterReturn;
+  registration?: UseFormRegisterReturn;
   className?: string;
   containerClassName?: string;
-  errorClassName?: string;
 };
 
-export function Input({
+export function Textarea({
   label,
   error,
   registration,
   className,
   containerClassName,
-  errorClassName,
   ...props
-}: InputProps) {
+}: TextAreaProps) {
   return (
     <div className="flex w-full flex-col gap-1">
       {label && (
         <label className="text-sm font-medium text-gray-700">{label}</label>
       )}
 
-      <InputContainer className={containerClassName} error={!!error}>
-        <input
+      <InputContainer
+        className={twMerge('h-auto py-2', containerClassName)}
+        error={!!error}
+      >
+        <textarea
           {...registration}
           {...props}
           className={twMerge(
@@ -42,19 +43,10 @@ export function Input({
             boxShadow: '0 0 0px 1000px white inset',
             caretColor: 'var(--color-primary-500)',
           }}
-        />
+        ></textarea>
       </InputContainer>
 
-      {error && (
-        <span
-          className={twMerge(
-            'text-xs font-medium text-red-500',
-            errorClassName,
-          )}
-        >
-          {error}
-        </span>
-      )}
+      {error && <span className="text-xs text-red-500">{error}</span>}
     </div>
   );
 }

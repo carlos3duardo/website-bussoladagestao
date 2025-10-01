@@ -39,36 +39,7 @@ export function Welcome({ inscricao }: WelcomeProps) {
       .finally(() => {
         setSubmitting(false);
       });
-
-    // try {
-    //   await axios.post('/api/canvas360/avaliacao', {
-    //     inscricao_id: inscricao.id,
-    //   });
-
-    //   alert('avaliacao criada. redirecionar');
-    // } catch (err) {
-    //   console.error(err);
-    //   if (isAxiosError(err)) {
-    //     const response = err.response;
-    //     const json = await response?.data;
-
-    //     console.error('root.serverError', { message: json.message });
-
-    //     return;
-    //   }
-
-    //   Swal.fire({
-    //     icon: 'error',
-    //     title: 'Pronto',
-    //     html: `Enviamos para o endereço de e-mail informado um link
-    //         para a realização do teste, com mais intruções a seguir.`,
-    //     confirmButtonText: 'Fechar',
-    //     confirmButtonColor: '#fe5314',
-    //   });
-    // } finally {
-    //   setSubmitting(false);
-    // }
-  }, [inscricao.id]);
+  }, [inscricao.empresa.nome, inscricao.id]);
 
   return (
     <div className="grid gap-4 lg:grid-cols-2 lg:gap-8">

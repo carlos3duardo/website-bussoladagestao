@@ -42,6 +42,7 @@ interface TableContentProps {
   dataSrc: string;
   params?: QueryParams;
   refetchInterval?: number;
+  emptyMessage?: string;
 }
 
 function TableContent({
@@ -50,6 +51,7 @@ function TableContent({
   params,
   columns,
   refetchInterval = 0,
+  emptyMessage,
 }: TableContentProps) {
   const { setRowsCount, setPagesCount, pageSize } =
     useContext(DataTableContext);
@@ -188,7 +190,7 @@ function TableContent({
                       <Lottie animationData={noDataIcon} />
                     </figure>
                     <p className="text-center text-sm font-medium text-slate-400">
-                      Nenhum registro encontrado.
+                      {emptyMessage || 'Nenhum registro encontrado.'}
                     </p>
                   </div>
                 </td>
@@ -242,6 +244,7 @@ interface DataTableContentProps {
   emptyTableMessage?: string;
   userCanChangePageSize?: boolean;
   refetchInterval?: number;
+  emptyMessage?: string;
 }
 
 export function DataTableContent({
@@ -250,6 +253,7 @@ export function DataTableContent({
   defaultParams = {},
   columns,
   refetchInterval = 0,
+  emptyMessage,
 }: DataTableContentProps) {
   const searchParams = useSearchParams();
 
@@ -273,6 +277,7 @@ export function DataTableContent({
         params={queryParams()}
         columns={columns}
         refetchInterval={refetchInterval}
+        emptyMessage={emptyMessage}
       />
     </div>
   );

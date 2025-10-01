@@ -6,6 +6,7 @@ import { CardInfo } from '@/components/ui/CardInfo';
 import { getTesteDiscInscricao } from '@/lib/api';
 import { firstName } from '@/lib/helpers';
 
+import { Error } from './components/Error';
 import { UsuarioTabela } from './components/UsuarioTabela';
 
 export const metadata: Metadata = {
@@ -18,12 +19,20 @@ interface PageProps {
   params: Promise<{
     id: string;
   }>;
+  searchParams: Promise<{
+    chave: string;
+  }>;
 }
 
-export default async function Page({ params }: PageProps) {
+export default async function Page({ params, searchParams }: PageProps) {
   const { id } = await params;
+  const { chave } = await searchParams;
 
   const testeDisc = await getTesteDiscInscricao({ id });
+
+  if (!testeDisc || testeDisc.chave !== chave) {
+    return <Error />;
+  }
 
   return (
     <main className="mx-auto w-full max-w-7xl">
@@ -60,9 +69,8 @@ export default async function Page({ params }: PageProps) {
       </div>
 
       <br />
-      <div className="mx-auto max-w-7xl">
-        <UsuarioTabela inscricaoId={id} />
-      </div>
+
+      <UsuarioTabela inscricaoId={id} />
     </main>
   );
 }

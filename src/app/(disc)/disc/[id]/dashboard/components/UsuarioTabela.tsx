@@ -8,7 +8,6 @@ import { Card, DataTable } from '@/components/ui';
 import { DataTableColumnProps } from '@/components/ui/DataTable';
 import { dateBr, dateTimeBr } from '@/lib/helpers';
 import { ApiTesteDiscUsuarioTableRowProps } from '@/types';
-
 interface UsuarioTabelaProps {
   inscricaoId: string;
 }
@@ -107,6 +106,7 @@ export function UsuarioTabela({ inscricaoId }: UsuarioTabelaProps) {
         dataSrc={`/api/trial/disc/${inscricaoId}/usuario`}
         columns={columns}
         refetchInterval={30}
+        emptyMessage="Aguardando realização dos testes pelos usuários"
       />
       <DataTable.Footer>
         <DataTable.FooterSection>

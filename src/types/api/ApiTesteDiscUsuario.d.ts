@@ -32,18 +32,19 @@ type ResultadoPerfilProps = {
 
 type ResultadoProps = {
   disc: ResultadoPerfilProps[];
-  analise: {
-    perfil: string;
-    resumo: string;
-    descricao: string;
-    adjetivos: string[];
-    comportamentos: string[];
-    forcas: string[];
-    fraquezas: string[];
-    animadores: string[];
-    desanimadores: string[];
-    adequacao: string;
-  };
+};
+
+type AnaliseProps = {
+  perfil: string;
+  resumo: string;
+  descricao: string;
+  adjetivos: string[];
+  comportamentos: string[];
+  forcas: string[];
+  fraquezas: string[];
+  animadores: string[];
+  desanimadores: string[];
+  adequacao: string;
 };
 
 export interface ApiTesteDiscUsuario {
@@ -59,4 +60,5 @@ export interface ApiTesteDiscUsuario {
   progresso: number;
   perfil: PerfilProps | null;
   resultado: ResultadoProps;
+  analise: AnaliseProps | null;
 }

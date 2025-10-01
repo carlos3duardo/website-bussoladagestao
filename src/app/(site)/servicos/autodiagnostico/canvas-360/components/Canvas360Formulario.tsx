@@ -5,12 +5,10 @@ import axios, { isAxiosError } from 'axios';
 import { isPhone } from 'brazilian-values';
 import { useForm } from 'react-hook-form';
 import Swal from 'sweetalert2';
-import { twMerge } from 'tailwind-merge';
 import z from 'zod';
 
 import { Input, Select } from '@/components/form';
 import { Button, PageSection } from '@/components/ui';
-import { ramosAtividade } from '@/lib/data';
 
 const formSchema = z.object({
   usuario: z
@@ -21,12 +19,13 @@ const formSchema = z.object({
     .string()
     .min(1, 'A empresa precisa ser preenchida.')
     .min(4, 'A empresa precisa ter pelo menos 4 caracteres.'),
-  ramo_atividade_id: z
-    .string()
-    .min(1, { message: 'Informe o ramo de atividade.' }),
   colaboradores: z
     .string()
     .min(1, { message: 'Informe a quantidade de colaboradores.' }),
+  area_atuacao: z
+    .string()
+    .min(1, 'A Área de Atuação precisa ser preenchida.')
+    .min(12, 'A Área de Atuação precisa ter pelo menos 12 caracteres.'),
   email: z
     .string()
     .check(
@@ -47,6 +46,7 @@ export function Canvas360Formulario() {
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors, isSubmitting },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -65,6 +65,8 @@ export function Canvas360Formulario() {
             Não esquece de conferir sua caixa de spam!`,
         confirmButtonText: 'Fechar',
         confirmButtonColor: '#fe5314',
+      }).then(() => {
+        reset();
       });
     } catch (err) {
       console.error(err);
@@ -111,38 +113,58 @@ export function Canvas360Formulario() {
               onSubmit={handleSubmit(formSubmit)}
               className="relative flex w-full flex-col gap-4"
             >
-              <fieldset className="grid grid-cols-2 gap-4">
-                <div className="col-span-2">
+              <fieldset className="grid grid-cols-12 gap-4">
+                <div className="col-span-12">
                   <Input
                     type="text"
                     placeholder="Seu nome"
                     registration={register('usuario')}
                     error={errors.usuario?.message}
-                    containerClassName=""
+                    errorClassName="text-white"
                   />
                 </div>
-                <div className="col-span-2">
+
+                <div className="col-span-12">
                   <Input
                     type="text"
                     placeholder="Sua empresa"
                     registration={register('empresa')}
                     error={errors.empresa?.message}
+                    errorClassName="text-white"
                   />
                 </div>
 
-                <div className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1">
-                  <Select
-                    registration={register('ramo_atividade_id')}
-                    error={errors.ramo_atividade_id?.message}
-                    options={ramosAtividade.map((atividade) => ({
-                      value: atividade.id,
-                      label: atividade.nome,
-                    }))}
-                    placeholder="Ramo de atividade"
+                <div className="col-span-12 md:col-span-6 lg:col-span-12 xl:col-span-6">
+                  <Input
+                    type="email"
+                    placeholder="Seu melhor e-mail"
+                    registration={register('email')}
+                    error={errors.email?.message}
+                    errorClassName="text-white"
                   />
                 </div>
 
-                <div className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1">
+                <div className="col-span-12 md:col-span-6 lg:col-span-12 xl:col-span-6">
+                  <Input
+                    type="text"
+                    placeholder="Whatsapp"
+                    registration={register('whatsapp')}
+                    error={errors.whatsapp?.message}
+                    errorClassName="text-white"
+                  />
+                </div>
+
+                <div className="col-span-12 md:col-span-8 lg:col-span-12 xl:col-span-8">
+                  <Input
+                    type="text"
+                    placeholder="Descreva sua área de atuação"
+                    registration={register('area_atuacao')}
+                    error={errors.area_atuacao?.message}
+                    errorClassName="text-white"
+                  />
+                </div>
+
+                <div className="col-span-12 md:col-span-4 lg:col-span-12 xl:col-span-4">
                   <Select
                     registration={register('colaboradores')}
                     error={errors.colaboradores?.message}
@@ -164,29 +186,12 @@ export function Canvas360Formulario() {
                         label: 'Acima de 500 colaboradores',
                       },
                     ]}
-                    placeholder="Qtde de colaboradores"
+                    errorClassName="text-white"
+                    placeholder="Colaboradores"
                   />
                 </div>
 
-                <div className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1">
-                  <Input
-                    type="email"
-                    placeholder="Seu melhor e-mail"
-                    registration={register('email')}
-                    error={errors.email?.message}
-                  />
-                </div>
-
-                <div className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1">
-                  <Input
-                    type="text"
-                    placeholder="Whatsapp"
-                    registration={register('whatsapp')}
-                    error={errors.whatsapp?.message}
-                  />
-                </div>
-
-                <div className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1">
+                <div className="col-span-12 md:col-span-8 lg:col-span-12 xl:col-span-8">
                   <Input
                     type="text"
                     placeholder="Cidade"
@@ -195,7 +200,7 @@ export function Canvas360Formulario() {
                   />
                 </div>
 
-                <div className="col-span-2 md:col-span-1 lg:col-span-2 xl:col-span-1">
+                <div className="col-span-12 md:col-span-4 lg:col-span-12 xl:col-span-4">
                   <Select
                     registration={register('uf')}
                     error={errors.uf?.message}
@@ -233,7 +238,12 @@ export function Canvas360Formulario() {
                 </div>
               </fieldset>
               <fieldset>
-                <Button type="submit" variant="secondary" className="px-8">
+                <Button
+                  type="submit"
+                  variant="secondary"
+                  className="px-8"
+                  isLoading={isSubmitting}
+                >
                   Enviar
                 </Button>
               </fieldset>

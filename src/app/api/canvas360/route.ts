@@ -19,8 +19,6 @@ export async function POST(req: Request) {
 
   const accessToken = await getApiClientAccessToken();
 
-  console.log({ data, accessToken });
-
   try {
     await axios({
       baseURL: API_URL,

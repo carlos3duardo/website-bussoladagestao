@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     'Feedbacks',
     '1:1',
     'DISC',
+    'Business Model Canvas',
   ],
   referrer: 'same-origin',
   creator: 'Bússola da Gestão',
@@ -77,7 +78,7 @@ export default function RootLayout({
         <AppProviders>
           <div className="grid min-h-dvh grid-rows-[auto_1fr_auto]">
             <Header />
-            <div className="px-4 py-4 2xl:py-6">{children}</div>
+            {children}
             <Footer />
           </div>
           <ScreenSizeViewer />

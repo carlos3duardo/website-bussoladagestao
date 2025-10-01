@@ -18,4 +18,5 @@ export interface ApiTesteDiscInscricao {
   } | null;
   usuarios: number;
   validade: string;
+  chave: string;
 }

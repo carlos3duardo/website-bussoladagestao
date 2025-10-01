@@ -30,15 +30,17 @@ export function ResultadoUsuario({
   usuario,
   usuarioId,
 }: ResultadoProps) {
+  const analise = usuario.analise ?? null;
+
   const {
-    comportamentos,
-    forcas,
-    fraquezas,
-    adjetivos,
-    animadores,
-    desanimadores,
-    adequacao,
-  } = usuario.resultado.analise;
+    comportamentos = null,
+    forcas = null,
+    fraquezas = null,
+    adjetivos = null,
+    animadores = null,
+    desanimadores = null,
+    adequacao = null,
+  } = analise || {};
 
   const { isLoading, data: resultado } = useResultadoTesteDiscUsuario({
     inscricaoId,
@@ -73,13 +75,13 @@ export function ResultadoUsuario({
                 <h3 className="text-base font-bold opacity-80">
                   {usuario.cargo}, {usuario.inscricao.empresa.nome}.
                 </h3>
-                {usuario.resultado.analise.resumo && (
+                {usuario.analise?.resumo && (
                   <p className="my-2 text-sm font-medium text-balance">
-                    {usuario.resultado.analise.resumo}
+                    {usuario.analise?.resumo}
                   </p>
                 )}
 
-                {adjetivos.length > 0 && (
+                {adjetivos && adjetivos.length > 0 && (
                   <ul className="flex flex-wrap items-center gap-4 py-2">
                     {adjetivos.map((adjetivo) => (
                       <li
@@ -92,9 +94,9 @@ export function ResultadoUsuario({
                   </ul>
                 )}
 
-                {usuario.resultado.analise.descricao && (
+                {usuario.analise?.descricao && (
                   <p className="my-2 text-base font-normal text-balance">
-                    {usuario.resultado.analise.descricao}
+                    {usuario.analise?.descricao}
                   </p>
                 )}
               </div>

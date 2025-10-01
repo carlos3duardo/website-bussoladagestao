@@ -1,5 +1,8 @@
+import { redirect } from 'next/navigation';
+
 import { getAvCorpInscricao } from '@/lib/api/getAvCorpInscricao';
 
+import { PageMain } from '../../components';
 import { Welcome } from '../../components/Welcome';
 
 interface PageProps {
@@ -17,18 +20,14 @@ export default async function Page({ params }: PageProps) {
   });
 
   if (inscricao.avaliacoes && inscricao.avaliacoes.length > 0) {
-    return (
-      <main>
-        <p>Voce ja fez a avaliacao.</p>
-      </main>
+    redirect(
+      `/canvas360/${inscricaoId}/avaliacao/${inscricao.avaliacoes[0].id}/questionario`,
     );
   }
 
   return (
-    <main>
-      <div className="mx-auto w-full max-w-7xl px-4 2xl:px-6">
-        <Welcome inscricao={inscricao} />
-      </div>
-    </main>
+    <PageMain>
+      <Welcome inscricao={inscricao} />
+    </PageMain>
   );
 }

@@ -4,6 +4,7 @@ import { CtaButton } from './CtaButton';
 import { DataTable } from './DataTable';
 import { HomeSection } from './home-section';
 import { Label } from './Label';
+import { Modal } from './Modal';
 import { PageSection } from './page-section';
 import ScreenSizeViewer from './ScreenSizeViewer';
 
@@ -14,6 +15,7 @@ export {
   DataTable,
   HomeSection,
   Label,
+  Modal,
   PageSection,
   ScreenSizeViewer,
 };

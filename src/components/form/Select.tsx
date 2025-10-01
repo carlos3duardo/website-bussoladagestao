@@ -18,6 +18,7 @@ type SelectProps = SelectHTMLAttributes<HTMLSelectElement> & {
   error?: string;
   registration: UseFormRegisterReturn;
   options: OptionProps[];
+  errorClassName?: string;
 };
 
 export function Select({
@@ -26,6 +27,7 @@ export function Select({
   error,
   registration,
   options,
+  errorClassName,
   ...props
 }: SelectProps) {
   const [value, setValue] = useState('');
@@ -61,7 +63,16 @@ export function Select({
         </select>
       </InputContainer>
 
-      {error && <span className="text-xs text-red-500">{error}</span>}
+      {error && (
+        <span
+          className={twMerge(
+            'text-xs font-medium text-red-500',
+            errorClassName,
+          )}
+        >
+          {error}
+        </span>
+      )}
     </div>
   );
 }
