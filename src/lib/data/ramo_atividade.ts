@@ -1,0 +1,181 @@
+export const ramosAtividade = [
+  {
+    id: 'c0f1144e-0944-43eb-bab3-a715030a5d1f',
+    nome: 'Academia de esportes / Artes marciais',
+  },
+  { id: '36bc63ba-c613-4825-e3c3-fd3aad1f143b', nome: 'Açúcar e álcool' },
+  {
+    id: 'f15ccab6-14f6-4cc4-de27-785950022393',
+    nome: 'Administração e participação',
+  },
+  {
+    id: 'e80dd68a-4784-47d8-8fef-0ba6d0748a5f',
+    nome: 'Agências de turismo / Viagem',
+  },
+  {
+    id: '02a2ec01-b795-4cbd-bb2e-188f09aeffbd',
+    nome: 'Agricultura / Pecuária / Silvicultura',
+  },
+  { id: '21cfb77f-f382-4d31-8873-a8dc9877df4e', nome: 'Alimentos' },
+  {
+    id: '14d7b0c9-9716-4891-bd75-7058f0a41107',
+    nome: 'Arquitetura / Paisagismo / Urbanismo',
+  },
+  {
+    id: '750e585e-5d06-427b-99a9-ce3d15ef4013',
+    nome: 'Assessoria de imprensa',
+  },
+  { id: 'e20fecb1-cb65-4e46-adb8-63a7faa5e7fa', nome: 'Automação' },
+  { id: 'bbd9a746-d192-4d4f-c8ae-1ceebd470a77', nome: 'Automotivo' },
+  { id: '363980e3-ca39-49f2-cd72-796207d65475', nome: 'Bancário / Financeiro' },
+  { id: '639b711a-7e04-4926-d6c2-5f6873d11491', nome: 'Bebidas' },
+  { id: 'bb47371f-369a-4459-f92a-d1662901c93a', nome: 'Bens de capital' },
+  {
+    id: '76fd5af7-f86b-4f79-eba1-ba38c555c872',
+    nome: 'Bens de consumo (Outros)',
+  },
+  { id: '6dd017c5-de35-4a6b-877f-95e144115c46', nome: 'Borracha' },
+  { id: '4d7e735a-7096-4a0c-d304-1ff31acb0505', nome: 'Café' },
+  { id: '07fbee98-5977-47c6-b180-08e22586c964', nome: 'Calçados' },
+  { id: '5bd80085-6a50-4da4-a3cb-0d8b1fc3a56b', nome: 'Comércio atacadista' },
+  { id: '7e596a35-ab03-41d9-bb1f-9bb2461f402f', nome: 'Comércio varejista' },
+  { id: 'c8207513-7e60-42bc-9be4-67e8c245fad7', nome: 'Comunicação' },
+  {
+    id: '852fe0f8-fd9e-46e7-dec5-7a4b9e3a4322',
+    nome: 'Concessionárias / Autopeças',
+  },
+  { id: 'a60d8c90-cad1-4dd6-d267-6d2bca781a70', nome: 'Construção Civil' },
+  { id: '5cfa158d-94a8-48b0-dfa9-bab8038b4a66', nome: 'Consultoria Geral' },
+  {
+    id: '0364d964-5f34-4a07-c571-908e4148ab51',
+    nome: 'Contabilidade / Auditoria',
+  },
+  { id: '6fd35c76-686f-4ea8-cc8f-8aa79e1155b6', nome: 'Corretagem (Imóveis)' },
+  { id: '6a318a01-ba14-4f1b-dfd7-3f4ed8447fba', nome: 'Corretagem (Seguros)' },
+  {
+    id: '59142686-54c4-495b-881f-c4eef8168471',
+    nome: 'Corretagem de títulos e valores imobiliários',
+  },
+  { id: 'f94b5a3d-e57b-47aa-bc14-741903c5c287', nome: 'Cosméticos' },
+  {
+    id: '255fa9d8-59e6-4570-da29-879bb237177f',
+    nome: 'Diversão / Entretenimento',
+  },
+  { id: '3a620940-4349-411d-fc5e-2c0030067c0a', nome: 'Educação / Idiomas' },
+  {
+    id: '75cd8efe-f730-4b5b-9a00-96e7b4790470',
+    nome: 'Eletrônica / Eletroeletrônica / Eletrodomésticos',
+  },
+  { id: 'fc788930-c1f5-4c1c-808f-9e80873f258b', nome: 'Embalagens' },
+  {
+    id: '89305c93-dde3-4555-b98b-16d77ccc6512',
+    nome: 'Energia / Eletricidade',
+  },
+  { id: 'd3361675-84ef-4cdb-d971-cc0f63df177f', nome: 'Engenharia' },
+  {
+    id: 'fea4a573-9e17-4139-ceb1-b15eb9603c4c',
+    nome: 'Equipamentos industriais',
+  },
+  {
+    id: '68a551c6-4e9f-46b2-f780-184d4f0831c4',
+    nome: 'Equipamentos médicos / precisão',
+  },
+  { id: '602c0141-17f1-4075-973e-15384fc16dfc', nome: 'Estética / Academias' },
+  { id: 'c3883b69-dafd-433d-d258-aa8e2f30dfbd', nome: 'Eventos' },
+  {
+    id: 'a32a55e5-2822-4ec6-b30b-4e1a17d5e0cb',
+    nome: 'Farmacêutica / Veterinária',
+  },
+  { id: '0b07d291-c48a-4031-8395-1a7d314e37fd', nome: 'Financeiras' },
+  {
+    id: 'c2d276dd-8996-4e44-b7a9-84b7e17bf99b',
+    nome: 'Fornecedores de Materiais e Equipamentos',
+  },
+  {
+    id: '4d2215bf-d2da-47bf-9996-96d846cb8729',
+    nome: 'Fornecedores de Serviços de Apoio Administrativo e Facilities',
+  },
+  {
+    id: '10c6c138-0220-4d6e-9147-e21358b7d36a',
+    nome: 'Fornecedores de Serviços de Distribuição',
+  },
+  { id: '21989fe1-d0bd-4dc2-ed57-2b4b4934117e', nome: 'Gráfica / Editoras' },
+  {
+    id: 'eab57e7b-5fe1-4df6-88cb-e7790c022288',
+    nome: 'Importação / Exportação',
+  },
+  { id: '591700e4-c5b8-4bbe-8100-0854b598be73', nome: 'Incorporadora' },
+  { id: '5a5e0dd7-1cef-42ae-db86-e4e6d0496f75', nome: 'Indústrias' },
+  { id: 'a61e38c6-f980-4356-ba2e-ec8419567a90', nome: 'Informática' },
+  { id: '891a3187-dc82-4cdc-e41b-568a654cdcc9', nome: 'Internet / Sites' },
+  { id: 'ca500f13-273f-4bd0-978c-54b6dcf28b32', nome: 'Jornais' },
+  { id: '65699081-f068-436f-8535-2bc9b6e0a817', nome: 'Jurídica' },
+  { id: '7f9e2b5f-1004-4f73-9474-b6934534f3b7', nome: 'Logística / Armazéns' },
+  { id: '35d0d71e-e8b8-4d95-e3ad-cec86a951dab', nome: 'Madeiras' },
+  {
+    id: '980687c7-5542-41bd-b84b-541993c5a807',
+    nome: 'Materiais de construção',
+  },
+  {
+    id: 'baf41eb6-2db8-45b9-e002-220d0b085779',
+    nome: 'Material de escritório',
+  },
+  { id: 'aa537187-f1e3-4289-8d3f-84f32c14a96c', nome: 'Mecânica / Manutenção' },
+  {
+    id: '64e9ff31-9be9-4424-f1e2-32730a8a9560',
+    nome: 'Metalúrgica / Siderúrgica',
+  },
+  { id: 'a9719f53-474c-4e57-f15c-8912093d2a55', nome: 'Mineração' },
+  {
+    id: '0ba1741b-8b5f-422f-c507-efd3835fb222',
+    nome: 'Móveis e artefatos de decoração',
+  },
+  { id: '5db3fc6d-cb1c-4b1a-e15c-648e2d99599d', nome: 'Órgãos públicos' },
+  { id: 'b4fe0186-a632-4af3-d4ea-452ca03dd3ce', nome: 'Outros' },
+  { id: '1ddc8a2f-74f3-4893-89a8-62ab3e4cc65c', nome: 'Papel e derivados' },
+  {
+    id: '35451912-d4ff-4401-a9cf-dbbea2373b11',
+    nome: 'Petroquímico / Petróleo',
+  },
+  { id: '73a6012e-95fc-4e19-a06b-461d1c9a3890', nome: 'Plásticos' },
+  {
+    id: '9490a1eb-132d-43bd-9a46-b13f874a0046',
+    nome: 'Prestadora de serviços',
+  },
+  {
+    id: '9039331a-af20-4458-e490-6c3e297e3066',
+    nome: 'Publicidade / Propaganda',
+  },
+  { id: '23f0541a-f7f4-4861-8b73-a1e182c38da7', nome: 'Recursos humanos' },
+  { id: '818bfbdf-43bc-4643-ae89-edb9f0429eb0', nome: 'Relações públicas' },
+  {
+    id: '8bdfc0a0-a662-427f-b59f-3764ce5d1aa2',
+    nome: 'Representação comercial',
+  },
+  {
+    id: '06a15ca4-1e38-4b8a-fac2-d6063c3a74d4',
+    nome: 'Restaurante / Industrial / Fast Food',
+  },
+  { id: '7ed7c540-bb85-4f6e-9e65-35e0c16657a9', nome: 'Saúde' },
+  { id: '21754fc3-a46b-4ec5-a023-a54788f7978a', nome: 'Segurança patrimonial' },
+  {
+    id: '60201c00-8a3c-4f37-aee0-6949c3acb473',
+    nome: 'Seguros / Previdência privada',
+  },
+  {
+    id: 'd924e70a-cffd-438c-d754-7ab8245a9c4a',
+    nome: 'Sindicatos / Associações / ONGs',
+  },
+  {
+    id: '7f560ce2-a81e-431f-8360-f3287fde26c9',
+    nome: 'Supermercado / Hipermercado',
+  },
+  { id: 'c006c642-46f6-4e3c-8eef-3cf804ce62f2', nome: 'Telecomunicações' },
+  {
+    id: '751bb0cf-04dc-43c4-fb4d-bcfcd8d32381',
+    nome: 'Telemarketing / Call center',
+  },
+  { id: '8035b4c9-a363-4b7f-fadb-8b0c9d87768b', nome: 'Têxtil / Couro' },
+  { id: 'c288d2c1-5a58-4b1b-bf36-c42eff19ca34', nome: 'Transportes' },
+  { id: '53ca9e80-9232-42e5-9f51-495a7cdd0e16', nome: 'Turismo / Hotelaria' },
+] as const;
