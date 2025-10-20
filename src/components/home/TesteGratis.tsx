@@ -12,9 +12,9 @@ import bannerTestePerfil from './assets/images/bg-teste-gratis-perfil.jpg';
 const testes = [
   {
     id: 1,
-    title: 'Descubra a saúde da sua empresa',
+    title: 'Descubra a maturidade do seu modelo de negócio',
     description:
-      'Com base no Modelo de Excelência da Gestão (MEG21), identifique forças e pontos de melhoria no seu negócio. Ao final, receba um relatório inteligente com insights práticos para elevar sua performance.',
+      'Com base no Business Model Canvas (BMC), identifique forças e pontos de melhoria no seu negócio. Ao final, receba um relatório inteligente com insights práticos para elevar sua performance.',
     beneficios: [
       'Avaliação precisa e confiável',
       'Relatório personalizado com recomendações',

@@ -1,9 +1,17 @@
 export interface ApiAvCorpCanvas360Questionario {
   id: string;
   nome: string;
+  inscricao: InscricaoProps | null;
   modelo: ModeloProps;
   blocos: BlocoProps[];
 }
+
+type InscricaoProps = {
+  id: string;
+  empresa: string;
+  usuario: string;
+  email: string;
+};
 
 type ModeloProps = {
   id: string;
@@ -34,6 +42,13 @@ type CategoriaProps = {
   questoes: QuestaoProps[];
 };
 
+type QuestaoProps = {
+  id: string;
+  nome: string;
+  resposta_id: string | null;
+  comentarios: ComentarioProps[];
+};
+
 type ComentarioProps = {
   id: string;
   comentario: string;
@@ -43,11 +58,4 @@ type ComentarioProps = {
     nome: string;
   };
   created_at: string;
-};
-
-type QuestaoProps = {
-  id: string;
-  nome: string;
-  resposta_id: string | null;
-  comentarios: ComentarioProps[];
 };

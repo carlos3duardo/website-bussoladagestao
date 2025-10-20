@@ -41,19 +41,21 @@ type BlocoProps = {
   id: string;
   nome: string;
   descricao: string;
+  maximo: number;
+  pontos: number;
+  peso: number;
+  maturidade: number;
   cor: string;
   icone: string;
-  pontos: number;
-  nota_maxima: number;
-  maturidade: number;
   categorias: CategoriaProps[];
 };
 
 type CategoriaProps = {
   id: string;
   nome: string;
+  maximo: number;
   pontos: number;
-  nota_maxima: number;
+  peso: number;
   maturidade: number;
   questoes: QuestaoProps[];
 };
@@ -97,8 +99,8 @@ type AnaliseProps = {
     'fontes-de-receita': string[];
     'proposta-de-valor': string[];
     'estrutura-de-custos': string[];
-    'recursos-principais': string[];
-    'parcerias-principais': string[];
+    'recursos-chave': string[];
+    'parcerias-chave': string[];
     'segmento-de-clientes': string[];
     'relacionamento-com-os-clientes': string[];
   };
