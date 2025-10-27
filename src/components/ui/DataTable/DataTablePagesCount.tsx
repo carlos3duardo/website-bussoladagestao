@@ -8,11 +8,13 @@ export function DataTablePagesCount() {
   const { rowsCount } = useContext(DataTableContext);
   return (
     <div className="text-muted-foreground text-sm font-semibold">
-      {rowsCount && (
+      {rowsCount && rowsCount > 0 ? (
         <>
           {rowsCount}{' '}
           {rowsCount === 1 ? 'registro encontrado' : 'registros encontrados'}
         </>
+      ) : (
+        ''
       )}
     </div>
   );

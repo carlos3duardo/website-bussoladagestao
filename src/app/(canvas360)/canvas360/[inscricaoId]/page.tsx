@@ -20,6 +20,12 @@ export default async function Page({ params }: PageProps) {
   });
 
   if (inscricao.avaliacoes && inscricao.avaliacoes.length > 0) {
+    if (inscricao.avaliacoes[0].conclusao) {
+      redirect(
+        `/canvas360/${inscricaoId}/avaliacao/${inscricao.avaliacoes[0].id}`,
+      );
+    }
+
     redirect(
       `/canvas360/${inscricaoId}/avaliacao/${inscricao.avaliacoes[0].id}/questionario`,
     );

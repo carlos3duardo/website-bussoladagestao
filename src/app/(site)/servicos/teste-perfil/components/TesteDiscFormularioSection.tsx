@@ -10,7 +10,7 @@ import { twMerge } from 'tailwind-merge';
 import z from 'zod';
 
 import { Input, Select } from '@/components/form';
-import { HomeSection, PageSection } from '@/components/ui';
+import { Button, HomeSection, PageSection } from '@/components/ui';
 
 const formSchema = z.object({
   usuario: z
@@ -134,30 +134,6 @@ export function TesteDiscFormularioSection() {
               onSubmit={handleSubmit(formSubmit)}
               className="relative flex flex-col gap-4 overflow-hidden rounded-lg bg-white p-4 shadow lg:p-8 xl:p-12"
             >
-              <div
-                data-show={showSuccessMessage}
-                className={twMerge(
-                  'absolute top-0 left-0 flex h-full w-full -translate-y-full items-center justify-center bg-emerald-100 transition-transform duration-[500ms] ease-in-out',
-                  'data-[show=true]:translate-y-0',
-                )}
-              >
-                <div className="flex flex-col items-center gap-2 p-12">
-                  <div>
-                    <CircleCheck size={32} />
-                  </div>
-                  <h4 className="font-bold">
-                    Recebemos sua requisição com sucesso!
-                  </h4>
-                  <p className="text-center text-balance">
-                    Enviamos um link para que você possa acompnar a realização
-                    dos testes DISC dos seus colaboradores.
-                  </p>
-                  <p className="text-center text-balance">
-                    Verifique sua caixa de entrada. Não esqueça também de
-                    verificar a caixa de spam.
-                  </p>
-                </div>
-              </div>
               <fieldset className="grid gap-4 md:grid-cols-2">
                 <div className="md:col-span-2">
                   <Input
@@ -238,17 +214,38 @@ export function TesteDiscFormularioSection() {
               </fieldset>
 
               <fieldset>
-                <button
+                <Button
                   type="submit"
-                  className={twMerge(
-                    'bg-primary-500 hover:bg-primary-700 flex h-12 items-center rounded px-5 font-medium text-white hover:cursor-pointer',
-                    'disabled:opacity-50',
-                  )}
+                  isLoading={isSubmitting}
                   disabled={isSubmitting}
                 >
-                  Entrar
-                </button>
+                  Enviar
+                </Button>
               </fieldset>
+              <div
+                data-show={showSuccessMessage}
+                className={twMerge(
+                  'absolute top-0 left-0 flex h-full w-full -translate-y-full items-center justify-center bg-emerald-100 transition-transform duration-[500ms] ease-in-out',
+                  'data-[show=true]:translate-y-0',
+                )}
+              >
+                <div className="flex flex-col items-center gap-2 p-12">
+                  <div>
+                    <CircleCheck size={32} />
+                  </div>
+                  <h4 className="font-bold">
+                    Recebemos sua requisição com sucesso!
+                  </h4>
+                  <p className="text-center text-balance">
+                    Enviamos um link para que você possa acompnar a realização
+                    dos testes DISC dos seus colaboradores.
+                  </p>
+                  <p className="text-center text-balance">
+                    Verifique sua caixa de entrada. Não esqueça também de
+                    verificar a caixa de spam.
+                  </p>
+                </div>
+              </div>
             </form>
           </div>
         </div>

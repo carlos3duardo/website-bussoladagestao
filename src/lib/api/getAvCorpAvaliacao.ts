@@ -13,14 +13,23 @@ interface Params {
 export const getAvCorpAvaliacao = cache(async ({ avaliacaoId }: Params) => {
   const accessToken = await getApiClientAccessToken();
 
-  const response = await axios.get(
-    `${API_URL}/trial/avcorp/canvas360/avaliacao/${avaliacaoId}`,
-    {
-      headers: {
-        Authorization: `Bearer ${accessToken}`,
+  try {
+    const response = await axios.get(
+      `${API_URL}/trial/avcorp/canvas360/avaliacao/${avaliacaoId}`,
+      {
+        params: {
+          with: 'resultado,analise',
+        },
+        headers: {
+          Authorization: `Bearer ${accessToken}`,
+        },
       },
-    },
-  );
+    );
 
-  return response.data as unknown as ApiAvCorpAvaliacaoProps;
+    return response.data as unknown as ApiAvCorpAvaliacaoProps;
+  } catch (error) {
+    console.error(error);
+
+    return null;
+  }
 });
