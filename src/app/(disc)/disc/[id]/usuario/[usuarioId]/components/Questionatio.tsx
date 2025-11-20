@@ -122,6 +122,24 @@ export function Questionario({
     }
   }, [progresso, router]);
 
+  // 🔒 Alerta de saída enquanto o teste não for concluído
+  useEffect(() => {
+    const handleBeforeUnload = (event: BeforeUnloadEvent) => {
+      // Só alerta se o teste não estiver completo
+      if (progresso < 100) {
+        event.preventDefault();
+        event.returnValue = ''; // Necessário para ativar o alerta
+      }
+    };
+
+    window.addEventListener('beforeunload', handleBeforeUnload);
+
+    // Cleanup: remove o listener quando o componente desmontar
+    return () => {
+      window.removeEventListener('beforeunload', handleBeforeUnload);
+    };
+  }, [progresso]);
+
   return (
     <div className="">
       <div className="mx-auto mt-4 w-full max-w-[720px] py-8">
@@ -160,21 +178,6 @@ export function Questionario({
           </div>
         </div>
       </div>
-
-      {/* apagar trecho abaixo antes de ir para produção */}
-
-      {/* <h2>Questão atual</h2>
-      <pre className="border-lg rounded-md bg-slate-100 p-4 text-xs font-medium">
-        {JSON.stringify(questaoAtual, null, 2)}
-      </pre>
-      <h2>Questoes pendentes ({questoesPendentes.length})</h2>
-      <pre className="border-lg rounded-md bg-slate-100 p-4 text-xs font-medium">
-        {JSON.stringify(questoesPendentes, null, 2)}
-      </pre>
-      <h2>Questoes respondidas ({questoesRespondidas.length})</h2>
-      <pre className="border-lg rounded-md bg-slate-100 p-4 text-xs font-medium">
-        {JSON.stringify(questoesRespondidas, null, 2)}
-      </pre> */}
     </div>
   );
 }
