@@ -39,11 +39,11 @@ export default async function Page({ params }: PageProps) {
 
   return (
     <main className="mx-auto w-full max-w-7xl">
-      {usuario.progresso === 100 ? (
+      {usuario.conclusao ? (
         <ResultadoUsuario
           inscricaoId={inscricaoId}
-          usuario={usuario}
           usuarioId={usuarioId}
+          usuario={usuario}
         />
       ) : (
         <Card.Root>

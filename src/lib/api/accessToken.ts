@@ -20,7 +20,9 @@ export async function getApiClientAccessToken(): Promise<string> {
     if (isTokenExpired(cachedToken)) {
       const { accessToken, expiresIn } = await createNewToken();
 
-      await redis.set(REDIS_KEY, accessToken, 'EX', expiresIn);
+      await redis.set(REDIS_KEY, accessToken, {
+        EX: expiresIn,
+      });
 
       return accessToken;
     }
@@ -28,7 +30,9 @@ export async function getApiClientAccessToken(): Promise<string> {
 
   const { accessToken, expiresIn } = await createNewToken();
 
-  await redis.set(REDIS_KEY, accessToken, 'EX', expiresIn);
+  await redis.set(REDIS_KEY, accessToken, {
+    EX: expiresIn,
+  });
 
   return accessToken;
 }
