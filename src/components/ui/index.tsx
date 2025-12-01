@@ -2,6 +2,7 @@ import { Button } from './Button';
 import { Card } from './Card';
 import { CtaButton } from './CtaButton';
 import { DataTable } from './DataTable';
+import { Dialog } from './Dialog';
 import { HomeSection } from './home-section';
 import { Label } from './Label';
 import { Modal } from './Modal';
@@ -13,6 +14,7 @@ export {
   Card,
   CtaButton,
   DataTable,
+  Dialog,
   HomeSection,
   Label,
   Modal,

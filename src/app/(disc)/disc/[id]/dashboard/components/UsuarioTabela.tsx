@@ -1,10 +1,13 @@
 'use client';
 
+import { useQueryClient } from '@tanstack/react-query';
+import axios from 'axios';
 import Color from 'color';
-import { Cog, Hourglass, MessagesSquare, Target } from 'lucide-react';
+import { Cog, Hourglass, MessagesSquare, Target, Trash } from 'lucide-react';
 import Link from 'next/link';
+import { useCallback } from 'react';
 
-import { Card, DataTable } from '@/components/ui';
+import { Card, DataTable, Dialog } from '@/components/ui';
 import { DataTableColumnProps } from '@/components/ui/DataTable';
 import { dateBr, dateTimeBr } from '@/lib/helpers';
 import { ApiTesteDiscUsuarioTableRowProps } from '@/types';
@@ -13,12 +16,37 @@ interface UsuarioTabelaProps {
 }
 
 export function UsuarioTabela({ inscricaoId }: UsuarioTabelaProps) {
+  const queryClient = useQueryClient();
+
   const icones: Record<number, React.ReactNode> = {
     1: <Target size={16} strokeWidth={2.5} />,
     2: <MessagesSquare size={16} strokeWidth={2.5} />,
     3: <Hourglass size={16} strokeWidth={2.5} />,
     4: <Cog size={16} strokeWidth={2.5} />,
   };
+
+  const handleDeleteTest = useCallback(
+    async (id: string) => {
+      Dialog.ConfirmDelete.fire({
+        title: 'Você deseja excluir o teste do usuário?',
+        showCancelButton: true,
+        confirmButtonText: 'Sim, excluir',
+        cancelButtonText: 'Não, cancelar',
+        showLoaderOnConfirm: true,
+        preConfirm: async () => {
+          return axios
+            .delete(`/api/trial/disc/${inscricaoId}/usuario/${id}`)
+            .then(async () => {
+              await queryClient.refetchQueries();
+            })
+            .catch((error) => {
+              Dialog.Confirm.showValidationMessage(`Erro: ${error.message}`);
+            });
+        },
+      });
+    },
+    [inscricaoId, queryClient],
+  );
 
   const columns = [
     {
@@ -88,6 +116,24 @@ export function UsuarioTabela({ inscricaoId }: UsuarioTabelaProps) {
                 data-progress={progresso}
               />
             </span>
+          </div>
+        );
+      },
+    },
+    {
+      field: 'id',
+      label: <>&nbsp;</>,
+      thClassName: 'text-right',
+      tdClassName: 'text-right',
+      content: ({ id }: ApiTesteDiscUsuarioTableRowProps) => {
+        return (
+          <div className="flex justify-end">
+            <button
+              className="flex h-6 w-6 cursor-pointer items-center justify-center rounded bg-slate-100 hover:bg-red-100 hover:text-red-600"
+              onClick={() => handleDeleteTest(id)}
+            >
+              <Trash size={14} strokeWidth={2.5} />
+            </button>
           </div>
         );
       },
