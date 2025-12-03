@@ -2,7 +2,6 @@
 
 import { CardInfo } from '@/components/ui/CardInfo';
 import { useTesteDiscInscricao } from '@/hooks';
-import { set } from 'lodash';
 import {
   CloudAlert,
   Copy,
