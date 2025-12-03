@@ -20,10 +20,7 @@ export interface ApiAvCorpInscricao {
     id: string | null;
     nome: string;
     colaboradores: string | null;
-    ramo_atividade: {
-      id: string;
-      nome: string;
-    } | null;
+    area_atuacao: string | null;
   };
   municipio: string | null;
   uf: string | null;
