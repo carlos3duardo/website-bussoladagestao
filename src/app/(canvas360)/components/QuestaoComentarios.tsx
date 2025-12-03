@@ -125,7 +125,7 @@ function Comentarios({ avaliacaoId, questao }: ComentariosProps) {
         />
         <Modal.Body>
           {comentarios.length > 0 && (
-            <ul className="mb-6 flex flex-col gap-2">
+            <ul className="mb-6 flex max-h-[320px] flex-col gap-2 overflow-y-auto">
               {comentarios.map((comentario) => (
                 <li
                   key={comentario.id}
