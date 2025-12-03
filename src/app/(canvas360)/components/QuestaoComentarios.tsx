@@ -134,7 +134,12 @@ function Comentarios({ avaliacaoId, questao }: ComentariosProps) {
                   <span className="pt-1">
                     <MessageSquareText size={18} />
                   </span>
-                  <p className="flex-1 text-sm">{comentario.comentario}</p>
+                  <p
+                    className="flex-1 text-sm"
+                    style={{ whiteSpace: 'pre-wrap' }}
+                  >
+                    {comentario.comentario}
+                  </p>
                   <div>
                     <button
                       className="flex h-8 w-8 cursor-pointer items-center justify-center rounded bg-slate-200 hover:bg-red-200 hover:text-red-600"
