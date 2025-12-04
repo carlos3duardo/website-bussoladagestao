@@ -13,7 +13,7 @@ gsap.registerPlugin(useGSAP);
 const menu = [
   {
     title: 'Quem somos',
-    href: '#',
+    href: '/quem-somos',
   },
   {
     title: 'Produtos',
