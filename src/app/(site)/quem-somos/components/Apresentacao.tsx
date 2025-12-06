@@ -71,7 +71,7 @@ export function Apresentacao() {
         </div>
 
         <div className="grid gap-6 lg:grid-cols-3">
-          {features.map(({ icon: Icon, title, description }, i) => (
+          {features.map(({ icon: Icon, title, description }) => (
             <div
               className="flex flex-col gap-2 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm"
               key={title}

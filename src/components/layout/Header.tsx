@@ -17,19 +17,15 @@ const menu = [
   },
   {
     title: 'Produtos',
-    href: '#',
-  },
-  {
-    title: 'Clientes',
-    href: '#',
+    href: '/produtos',
   },
   {
     title: 'Cases',
-    href: '#',
+    href: '/cases',
   },
   {
     title: 'Contato',
-    href: '#',
+    href: '/contato',
   },
 ] as const;
 
