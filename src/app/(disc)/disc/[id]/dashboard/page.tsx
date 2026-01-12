@@ -6,6 +6,7 @@ import { firstName } from '@/lib/helpers';
 import { DashboardHeader } from './components/DashboardHeader';
 import { Error } from './components/Error';
 import { UsuarioTabela } from './components/UsuarioTabela';
+import { Expirado } from './components/Expirado';
 
 export const metadata: Metadata = {
   title: 'Teste DISC',
@@ -32,17 +33,28 @@ export default async function Page({ params, searchParams }: PageProps) {
     return <Error />;
   }
 
+  const isExpired = testeDisc.validade
+    ? new Date(testeDisc.validade) < new Date()
+    : false;
+
   return (
     <main className="mx-auto w-full max-w-7xl">
-      <h1 className="text-xl font-semibold">
-        Olá, {firstName({ fullName: testeDisc.usuario, ucfirst: true })}.
-      </h1>
+      {isExpired ? (
+        <Expirado />
+      ) : (
+        <>
+          <h1 className="text-xl font-semibold">
+            Olá, {firstName({ fullName: testeDisc.usuario, ucfirst: true })}.
+          </h1>
+          <pre>{JSON.stringify(testeDisc, null, 2)}</pre>
 
-      <DashboardHeader inscricaoId={id} />
+          <DashboardHeader inscricaoId={id} />
 
-      <br />
+          <br />
 
-      <UsuarioTabela inscricaoId={id} />
+          <UsuarioTabela inscricaoId={id} />
+        </>
+      )}
     </main>
   );
 }

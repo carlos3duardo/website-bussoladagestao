@@ -13,23 +13,19 @@ gsap.registerPlugin(useGSAP);
 const menu = [
   {
     title: 'Quem somos',
-    href: '#',
+    href: '/quem-somos',
   },
   {
     title: 'Produtos',
-    href: '#',
-  },
-  {
-    title: 'Clientes',
-    href: '#',
+    href: '/produtos',
   },
   {
     title: 'Cases',
-    href: '#',
+    href: '/cases',
   },
   {
     title: 'Contato',
-    href: '#',
+    href: '/contato',
   },
 ] as const;
 
@@ -121,7 +117,7 @@ export function Header() {
             ref={ctaRef}
           >
             <Link
-              href="/"
+              href="/contato?assunto=demonstracao"
               className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"
             >
               Agende uma demonstração

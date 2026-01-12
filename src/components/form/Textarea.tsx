@@ -46,7 +46,9 @@ export function Textarea({
         ></textarea>
       </InputContainer>
 
-      {error && <span className="text-xs text-red-500">{error}</span>}
+      {error && (
+        <span className="text-xs font-medium text-red-500">{error}</span>
+      )}
     </div>
   );
 }

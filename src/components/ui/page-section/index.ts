@@ -1,6 +1,7 @@
 import { SectionDescription } from './SectionDescription';
 import { SectionHeadline } from './SectionHeadline';
 import { SectionLabel } from './SectionLabel';
+import { SectionParagraph } from './SectionParagraph';
 import { SectionRoot } from './SectionRoot';
 
 export const PageSection = {
@@ -8,4 +9,5 @@ export const PageSection = {
   Label: SectionLabel,
   Headline: SectionHeadline,
   Description: SectionDescription,
+  Paragraph: SectionParagraph,
 };
