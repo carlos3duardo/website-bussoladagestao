@@ -1,6 +1,7 @@
 'use client';
 
 import { ChevronDown, ChevronRight } from 'lucide-react';
+import Link from 'next/link';
 import { useState } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -91,9 +92,11 @@ export function FaqSection() {
                 </p>
               </div>
               <div className="text-center lg:text-left">
-                <button className="bg-primary-500 hover:bg-primary-700 rounded-full px-4 py-2 text-sm font-medium text-white hover:cursor-pointer">
-                  Pedir ajuda
-                </button>
+                <Link href="/contato?assunto=duvida-canvas-360">
+                  <button className="bg-primary-500 hover:bg-primary-700 rounded-full px-4 py-2 text-sm font-medium text-white hover:cursor-pointer">
+                    Pedir ajuda
+                  </button>
+                </Link>
               </div>
             </div>
           </aside>

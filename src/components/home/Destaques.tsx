@@ -35,7 +35,7 @@ const destaques = [
     subject: 'Avaliação',
     description: 'O primeiro passo para a excelência',
     primaryActionText: 'Saiba mais',
-    primaryActionLink: '/',
+    primaryActionLink: '/servicos/diagnostico-corporativo',
     secondaryActionText: 'Contato',
     secondaryActionLink: '/',
     backgroundImageUrl: '/images/bg-destaque-executivo-com-laptop.jpg',

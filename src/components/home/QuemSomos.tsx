@@ -32,7 +32,7 @@ export function QuemSomos() {
     });
 
     gsap.to(setaRef.current, {
-      rotation: 180, // ou quantas voltas você quiser
+      rotation: 360 * 4, // ou quantas voltas você quiser
       ease: 'none',
       scrollTrigger: {
         trigger: document.body,

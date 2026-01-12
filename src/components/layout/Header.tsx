@@ -117,7 +117,7 @@ export function Header() {
             ref={ctaRef}
           >
             <Link
-              href="/"
+              href="/contato?assunto=demonstracao"
               className="ring-primary-500/40 bg-primary-500/20 hover:bg-primary-500 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white uppercase ring"
             >
               Agende uma demonstração
