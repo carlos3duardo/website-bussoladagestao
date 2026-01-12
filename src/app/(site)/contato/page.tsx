@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
+import { Suspense } from 'react';
 
 import { PageSection } from '@/components/ui';
 
@@ -36,7 +37,9 @@ export default async function Page() {
             />
           </figure>
           <div className="lg:col-span-7">
-            <FormularioContato />
+            <Suspense>
+              <FormularioContato />
+            </Suspense>
           </div>
         </div>
       </PageSection.Root>
