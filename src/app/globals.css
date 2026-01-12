@@ -36,10 +36,18 @@
   }
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background: var(--color-background);
   color: var(--color-slate-600);
   font-family: var(--font-inter);
+}
+
+:target {
+  scroll-margin-top: 1.2em;
 }
 
 .swiper-wrapper {

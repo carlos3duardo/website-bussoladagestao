@@ -10,7 +10,7 @@ import { twMerge } from 'tailwind-merge';
 import z from 'zod';
 
 import { Input, Select } from '@/components/form';
-import { Button, HomeSection, PageSection } from '@/components/ui';
+import { Button, PageSection } from '@/components/ui';
 
 const formSchema = z.object({
   usuario: z
@@ -84,7 +84,7 @@ export function TesteDiscFormularioSection() {
   }
 
   return (
-    <HomeSection.Root className="text-darken bg-primary-100">
+    <PageSection.Root id="formulario" className="text-darken bg-primary-100">
       <div className="relative mx-auto max-w-7xl px-4 2xl:px-6">
         <div className="grid gap-8 lg:grid-cols-12">
           <div
@@ -250,6 +250,6 @@ export function TesteDiscFormularioSection() {
           </div>
         </div>
       </div>
-    </HomeSection.Root>
+    </PageSection.Root>
   );
 }

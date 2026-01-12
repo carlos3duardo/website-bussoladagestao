@@ -2,8 +2,13 @@
 
 import { zodResolver } from '@hookform/resolvers/zod';
 import axios, { isAxiosError } from 'axios';
+import { useRef } from 'react';
+import ReCAPTCHA from 'react-google-recaptcha';
 import { useForm } from 'react-hook-form';
+import Swal from 'sweetalert2';
 import z from 'zod';
+
+import { Button } from '../form';
 
 const formSchema = z.object({
   nome: z
@@ -29,22 +34,36 @@ const formSchema = z.object({
 });
 
 export function ContatoFormulario() {
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
   type FormData = z.infer<typeof formSchema>;
 
   const {
     handleSubmit,
     register,
-    formState: { errors },
+    formState: { errors, isSubmitting },
     setError,
+    reset,
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
   });
 
   async function formSubmit(data: FormData) {
     try {
-      const response = await axios.post('/api/contato', data);
+      const token = recaptchaRef.current
+        ? await recaptchaRef.current.execute()
+        : null;
 
-      console.log(response);
+      await axios.post('/api/contato', { ...data, token });
+
+      Swal.fire({
+        icon: 'success',
+        title: 'Mensagem enviada com sucesso!',
+        html: 'Agradecemos a sua mensagem. Em breve, um de nossos especialistas entrará em contato com vocês.',
+        confirmButtonText: 'Fechar',
+        confirmButtonColor: '#fe5314',
+      }).then(() => {
+        reset();
+      });
     } catch (err) {
       console.error(err);
       if (isAxiosError(err)) {
@@ -188,12 +207,19 @@ export function ContatoFormulario() {
         </div>
       </fieldset>
       <fieldset>
-        <button
+        <ReCAPTCHA
+          ref={recaptchaRef}
+          size="invisible"
+          sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''}
+        />
+        <Button
           type="submit"
-          className="ring-primary-500 bg-primary-500 hover:bg-primary-700 hover:ring-primary-500 rounded px-4 py-3 text-sm font-bold text-white ring transition-all duration-200 hover:cursor-pointer"
+          variant="primary"
+          className="px-8"
+          isLoading={isSubmitting}
         >
-          Enviar mensagem
-        </button>
+          Enviar
+        </Button>
       </fieldset>
     </form>
   );
