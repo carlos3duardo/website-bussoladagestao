@@ -1,14 +1,6 @@
+import { ComponentProps } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-interface SectionProps {
-  children: React.ReactNode;
-  className?: string;
-}
-
-export function SectionRoot({ children, className }: SectionProps) {
-  return (
-    <section className={twMerge('relative py-24', className)}>
-      {children}
-    </section>
-  );
+export function SectionRoot({ className, ...rest }: ComponentProps<'section'>) {
+  return <section className={twMerge('relative py-24', className)} {...rest} />;
 }

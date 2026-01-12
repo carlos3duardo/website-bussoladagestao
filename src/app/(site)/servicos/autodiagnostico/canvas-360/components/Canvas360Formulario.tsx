@@ -91,7 +91,10 @@ export function Canvas360Formulario() {
   }
 
   return (
-    <PageSection.Root className="bg-primary-400 relative bg-[url(/images/bg-typing-keyboard.jpg)] bg-cover bg-center p-0">
+    <PageSection.Root
+      id="formulario"
+      className="bg-primary-400 relative bg-[url(/images/bg-typing-keyboard.jpg)] bg-cover bg-center p-0"
+    >
       <div className="bg-primary-400/40 absolute top-0 left-0 h-full w-full backdrop-blur-sm lg:hidden" />
       <div className="relative grid gap-12 lg:grid-cols-2 lg:gap-0">
         <div className="relative px-4 pt-24 lg:bg-[url(/images/bg-typing-keyboard.jpg)] lg:bg-cover lg:bg-center lg:pb-24">

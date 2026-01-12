@@ -45,14 +45,8 @@ export function TesteDiscHero() {
             <div className="mt-8 flex flex-col gap-3 md:flex-row">
               <CtaButton
                 className="w-full md:w-1/2 lg:w-auto"
-                linkUrl=""
+                linkUrl="#formulario"
                 label="Fazer avaliação agora"
-              />
-              <CtaButton
-                className="w-full md:w-1/2 lg:w-auto"
-                variant="secondary"
-                linkUrl=""
-                label="Ver exemplo de relatório"
               />
             </div>
           </div>

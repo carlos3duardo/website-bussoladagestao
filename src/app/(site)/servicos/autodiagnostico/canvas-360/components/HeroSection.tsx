@@ -42,14 +42,15 @@ export function HeroSection() {
             <div className="mt-8 flex flex-col gap-3 md:flex-row">
               <CtaButton
                 className="w-full md:w-1/2 lg:w-auto"
-                linkUrl=""
+                linkUrl="#formulario"
                 label="Fazer avaliação agora"
               />
               <CtaButton
                 className="w-full md:w-1/2 lg:w-auto"
                 variant="secondary"
-                linkUrl=""
+                linkUrl="/modelo.avaliacao.canvas.360.pdf"
                 label="Ver exemplo de relatório"
+                target="_blank"
               />
             </div>
           </div>
