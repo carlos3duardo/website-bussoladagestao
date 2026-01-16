@@ -4,6 +4,7 @@ import { CtaButton } from './CtaButton';
 import { DataTable } from './DataTable';
 import { Dialog } from './Dialog';
 import { HomeSection } from './home-section';
+import { InstagramPost } from './InstagramPost';
 import { Label } from './Label';
 import { Modal } from './Modal';
 import { PageSection } from './page-section';
@@ -16,6 +17,7 @@ export {
   DataTable,
   Dialog,
   HomeSection,
+  InstagramPost,
   Label,
   Modal,
   PageSection,

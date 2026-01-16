@@ -21,7 +21,7 @@ const menu = [
   },
   {
     title: 'Cases',
-    href: '/cases',
+    href: '/cases-de-sucesso',
   },
   {
     title: 'Contato',

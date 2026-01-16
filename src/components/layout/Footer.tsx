@@ -36,8 +36,8 @@ export function Footer() {
                 />
               </figure>
               <p className="text-base">
-                We make this belief a reality by putting clients first, leading
-                with exceptional ideas, doing the right thing, and giving back.
+                Temos o objetivo de fortalecer a sua gestão e impulsionar o
+                crescimento de seu negócio para alcançar seus objetivos.
               </p>
               <ul className="flex gap-2">
                 {socialnetworks.map((item) => (

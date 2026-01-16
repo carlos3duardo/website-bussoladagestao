@@ -22,9 +22,9 @@ const destaques = [
     subject: 'Pessoas',
     description: 'O capital mais importante na sua empresa',
     primaryActionText: 'Saiba mais',
-    primaryActionLink: '/',
+    primaryActionLink: '/servicos/rh-advanced',
     secondaryActionText: 'Contato',
-    secondaryActionLink: '/',
+    secondaryActionLink: '/contato?assunto=rh-advanced',
     backgroundImageUrl: '/images/bg-destaque-equipe-discutindo.jpg',
   },
   {
@@ -37,7 +37,7 @@ const destaques = [
     primaryActionText: 'Saiba mais',
     primaryActionLink: '/servicos/diagnostico-corporativo',
     secondaryActionText: 'Contato',
-    secondaryActionLink: '/',
+    secondaryActionLink: '/contato?assunto=diagnostico-corporativo',
     backgroundImageUrl: '/images/bg-destaque-executivo-com-laptop.jpg',
   },
   {
@@ -48,9 +48,9 @@ const destaques = [
     subject: 'Conhecimento',
     description: 'Aprendizado sem fronteiras',
     primaryActionText: 'Saiba mais',
-    primaryActionLink: '/',
+    primaryActionLink: '/servicos/universidade-corporativa',
     secondaryActionText: 'Contato',
-    secondaryActionLink: '/',
+    secondaryActionLink: '/contato?assunto=universidade-corporativa',
     backgroundImageUrl: '/images/bg-destaque-mulher-com-laptop.jpg',
   },
 ] as const;
