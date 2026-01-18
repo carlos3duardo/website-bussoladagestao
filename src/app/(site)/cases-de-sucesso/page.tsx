@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
-import { CaseEnergisa } from './components/CaseEnergisa';
-import { CaseEpasa } from './components/CaseEpasa';
+import { CasesEspeciais } from './components/CasesEspeciais';
+import { Clientes } from './components/Clientes';
+import { Depoimentos } from './components/Depoimentos';
 import { HeroSection } from './components/HeroSection';
 
 export const metadata: Metadata = {
@@ -14,8 +15,9 @@ export default async function Page() {
   return (
     <main>
       <HeroSection />
-      <CaseEpasa />
-      <CaseEnergisa />
+      <Clientes />
+      <CasesEspeciais />
+      <Depoimentos />
     </main>
   );
 }

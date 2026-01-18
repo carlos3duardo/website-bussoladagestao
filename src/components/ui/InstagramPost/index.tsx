@@ -1,4 +1,4 @@
-import { Ellipsis } from 'lucide-react';
+import { Bookmark, Ellipsis, Heart, MessageCircle, Send } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -22,16 +22,27 @@ export function InstagramPost({
     <div className="rounded-lg bg-white shadow">
       <header className="flex items-center justify-between gap-2 p-4">
         <figure>
-          <Image
-            src={avatarUrl}
-            width={1200}
-            height={1200}
-            className="h-[28px] w-[28px] rounded-full"
-            alt=""
-          />
+          <Link
+            href={`https://www.instagram.com/${userAccount}`}
+            target="_blank"
+          >
+            <Image
+              src={avatarUrl}
+              width={1200}
+              height={1200}
+              className="h-[28px] w-[28px] rounded-full"
+              alt=""
+            />
+          </Link>
         </figure>
         <div className="flex flex-grow flex-col gap-0.5">
-          <span className="text-sm leading-none font-bold">{userAccount}</span>
+          <Link
+            href={`https://www.instagram.com/${userAccount}`}
+            target="_blank"
+            className="text-sm leading-none font-bold"
+          >
+            {userAccount}
+          </Link>
           <span className="text-xs leading-none font-normal text-slate-600">
             {userName}
           </span>
@@ -51,7 +62,41 @@ export function InstagramPost({
           />
         </Link>
       </figure>
-      <div>footer</div>
+      <div className="flex items-center justify-between p-4">
+        <ul className="flex gap-2">
+          <li>
+            <Link href={postUrl} target="_blank">
+              <Heart
+                size={24}
+                className="text-slate-700 hover:fill-slate-700"
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href={postUrl} target="_blank">
+              <MessageCircle
+                size={22}
+                className="text-slate-700 hover:fill-slate-700"
+              />
+            </Link>
+          </li>
+          <li>
+            <Link href={postUrl} target="_blank">
+              <Send size={22} className="text-slate-700 hover:fill-slate-700" />
+            </Link>
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <Link href={postUrl} target="_blank">
+              <Bookmark
+                size={22}
+                className="text-slate-700 hover:fill-slate-700"
+              />
+            </Link>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 }
