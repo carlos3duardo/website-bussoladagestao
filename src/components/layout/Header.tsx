@@ -20,8 +20,8 @@ const menu = [
     href: '/produtos',
   },
   {
-    title: 'Cases',
-    href: '/cases',
+    title: 'Clientes',
+    href: '/clientes',
   },
   {
     title: 'Contato',

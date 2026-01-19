@@ -1,14 +1,12 @@
 import type { Metadata } from 'next';
 
-import { AutodiagnosticoCanvas360Section } from './components/AutodiagnosticoCanvas360Section';
 import { BeneficiosSection } from './components/BeneficiosSection';
 import { FaqSection } from './components/FaqSection';
 import { HeroSection } from './components/HeroSection';
-import { HistoriaSection } from './components/HistoriaSection';
-import { SobreSection } from './components/SobreSection';
+import { RecursosSection } from './components/RecursosSection';
 
 export const metadata: Metadata = {
-  title: 'Avaliação da Maturidade da Gestão',
+  title: 'Universidade Corporativa',
   description: '',
 };
 
@@ -16,10 +14,8 @@ export default async function Page() {
   return (
     <main>
       <HeroSection />
-      <SobreSection />
-      <HistoriaSection />
       <BeneficiosSection />
-      <AutodiagnosticoCanvas360Section />
+      <RecursosSection />
       <FaqSection />
     </main>
   );

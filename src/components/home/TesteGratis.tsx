@@ -1,7 +1,6 @@
 'use client';
 
 import { Lightbulb } from 'lucide-react';
-import Image from 'next/image';
 import Link from 'next/link';
 
 import { HomeSection } from '@/components/ui';
@@ -57,41 +56,33 @@ export function TesteGratis() {
           </div>
         </header>
 
-        <ul className="flex flex-col justify-center gap-6 lg:flex-row lg:gap-16">
+        <ul className="mx-auto grid w-full max-w-6xl gap-6 lg:grid-cols-2 lg:gap-12">
           {testes.map((teste) => (
-            <li key={teste.id} className="">
-              <div className="aspect-vertical-banner relative flex flex-col justify-end overflow-hidden rounded-lg 2xl:w-[480px]">
-                <Image
-                  src={teste.image}
-                  alt=""
-                  width={1280}
-                  height={1920}
-                  className="absolute top-0 left-0 h-full w-full object-cover"
-                />
-                <div className="from-darken to-darken/20 absolute top-0 left-0 h-full w-full bg-linear-to-t" />
-                <div className="relative p-6 text-white">
-                  <h4 className="text-3xl font-bold text-balance">
-                    {teste.title}
-                  </h4>
-                  <p>{teste.description}</p>
-                  <ul className="my-3 flex flex-col gap-1">
-                    {teste.beneficios.map((beneficio) => (
-                      <li key={beneficio} className="flex items-start gap-2">
-                        <Lightbulb
-                          size={18}
-                          className="text-primary-500 mt-1"
-                        />
-                        <span>{beneficio}</span>
-                      </li>
-                    ))}
-                  </ul>
-                  <Link
-                    href={teste.url}
-                    className="border-primary-500 bg-primary-500/20 hover:bg-primary-500 mt-4 flex w-full items-center justify-center rounded-md border py-3 text-center font-semibold text-white"
-                  >
-                    {teste.cta}
-                  </Link>
-                </div>
+            <li
+              key={teste.id}
+              className="relative flex flex-col justify-end overflow-hidden rounded-lg bg-slate-700 bg-cover bg-top pt-70 lg:bg-center"
+              style={{ backgroundImage: `url(${teste.image.src})` }}
+            >
+              <div className="from-darken to-darken/20 absolute top-0 left-0 h-full w-full bg-linear-to-t" />
+              <div className="relative p-6 text-white">
+                <h4 className="mb-4 text-3xl font-bold text-balance">
+                  {teste.title}
+                </h4>
+                <p>{teste.description}</p>
+                <ul className="my-3 flex flex-col gap-1">
+                  {teste.beneficios.map((beneficio) => (
+                    <li key={beneficio} className="flex items-start gap-2">
+                      <Lightbulb size={18} className="text-primary-500 mt-1" />
+                      <span>{beneficio}</span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href={teste.url}
+                  className="border-primary-500 bg-primary-500/20 hover:bg-primary-500 mt-4 flex w-full items-center justify-center rounded-md border py-3 text-center font-semibold text-white"
+                >
+                  {teste.cta}
+                </Link>
               </div>
             </li>
           ))}
