@@ -40,7 +40,7 @@ export function CasesEspeciais() {
             <li key={cliente.id}>
               <figure className="flex items-center justify-center p-8">
                 <Link
-                  href={`/cases-de-sucesso/${cliente.id}`}
+                  href={`/clientes/${cliente.id}`}
                   className="hover:bg-primary-50 rounded-md p-6"
                 >
                   <Image

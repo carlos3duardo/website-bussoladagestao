@@ -25,81 +25,48 @@
       }
     </style>
   </defs>
-  <g
-     id="g20"
-     transform="translate(872.11742,1.5000032)"
-     style="fill:#ffffff">
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-34.231757,0.77053)"
-       x="884.72852"
-       y="1018.4386"
-       id="text20"
-       xml:space="preserve"><tspan
-         x="884.72852"
-         y="1018.4386"
-         id="tspan8">J</tspan></text>
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-103.14975,0.77053)"
-       x="1400.6877"
-       y="1018.4386"
-       id="text19"
-       xml:space="preserve"><tspan
-         x="1400.6877"
-         y="1018.4386"
-         id="tspan9">O</tspan></text>
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-139.56321,0.77053)"
-       x="2244.9856"
-       y="1018.4386"
-       id="text18"
-       xml:space="preserve"><tspan
-         x="2244.9856"
-         y="1018.4386"
-         id="tspan10">G</tspan></text>
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-242.9828,0.77053)"
-       x="3001.3281"
-       y="1018.4386"
-       id="text17"
-       xml:space="preserve"><tspan
-         x="3001.3281"
-         y="1018.4386"
-         id="tspan11">R</tspan></text>
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-247.39398,0.77053)"
-       x="3668.2136"
-       y="1018.4386"
-       id="text16"
-       xml:space="preserve"><tspan
-         x="3668.2136"
-         y="1018.4386"
-         id="tspan12">O</tspan></text>
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-312.8109,0.77053)"
-       x="4502.5176"
-       y="1018.4386"
-       id="text15"
-       xml:space="preserve"><tspan
-         x="4502.5176"
-         y="1018.4386"
-         id="tspan13">U</tspan></text>
-    <text
-       style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;display:inline;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
-       transform="matrix(1.0005654,0,0,0.9994349,-422.23176,0.77053)"
-       x="5252.3638"
-       y="1018.4386"
-       id="text14"
-       xml:space="preserve"><tspan
-         x="5252.3638"
-         y="1018.4386"
-         id="tspan14">P</tspan></text>
-  </g>
+  <path
+     d="m 1074.1372,1033.4314 q -50.4757,0 -94.95423,-13.4935 -44.47855,-12.9938 -82.46024,-35.98267 l 40.98024,-105.94891 q 30.4853,17.49156 59.97108,26.98699 29.98555,9.49542 59.47135,9.49542 58.4718,0 89.9566,-28.98603 31.4848,-28.98602 31.4848,-92.95517 V 318.77599 h 129.9373 V 816.0362 q 0,65.46843 -27.4867,114.44481 -27.4867,48.47663 -79.9614,75.96339 -51.975,26.987 -126.9388,26.987 z"
+     id="text20"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,837.88566,2.2705332)"
+     aria-label="J" />
+  <path
+     d="m 1815.4875,1033.4314 q -79.4617,0 -147.4289,-27.4868 -67.4675,-27.98648 -117.4434,-77.46262 -49.9759,-49.47614 -77.4626,-115.94409 -27.4868,-66.46795 -27.4868,-143.93059 0,-77.96241 27.4868,-144.43036 27.4867,-66.46794 77.4626,-115.94408 49.9759,-49.47614 117.4434,-76.96289 67.9672,-27.48675 147.4289,-27.48675 78.9619,0 146.4294,27.98651 67.4674,27.9865 117.4433,77.9624 49.9759,49.9759 77.9624,116.44385 27.9865,65.96819 27.9865,142.43132 0,77.46264 -27.9865,143.93059 -27.9865,66.46795 -77.9624,115.94409 -49.9759,49.47614 -117.4433,77.46262 -67.4675,27.4868 -146.4294,27.4868 z m 0,-122.44099 q 49.4761,0 91.9556,-16.9918 42.9793,-17.49157 74.4641,-48.97639 31.9846,-31.98457 49.4762,-76.46312 17.9913,-44.97831 17.9913,-99.9518 0,-73.46458 -30.9851,-127.93831 -30.985,-54.47373 -83.9595,-84.45927 -52.9744,-29.98554 -118.9426,-29.98554 -49.9759,0 -92.4554,16.99181 -42.4796,16.9918 -74.4641,48.97638 -31.4849,31.98457 -49.4762,76.46313 -17.4915,44.47855 -17.4915,99.9518 0,73.46457 30.4853,127.9383 30.985,54.47373 83.9595,84.45927 52.9744,29.98554 119.4424,29.98554 z"
+     id="text19"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,768.96767,2.2705332)"
+     aria-label="O" />
+  <path
+     d="m 2681.7757,1033.4314 q -82.4602,0 -153.9258,-25.4877 -70.9658,-25.48775 -124.44,-72.96485 -53.4742,-47.47711 -83.4597,-114.44482 -29.9856,-67.46746 -29.9856,-150.92722 0,-83.45975 28.4863,-150.92721 28.986,-67.46747 80.961,-115.44433 51.9749,-47.97687 121.4414,-73.46458 69.4665,-25.98747 150.9272,-25.98747 37.4819,0 76.9629,5.99711 39.481,5.99711 78.4622,19.99036 39.4809,13.99326 75.4636,38.48145 l -55.4733,101.45107 q -37.4819,-23.98843 -80.4612,-35.48289 -42.9792,-11.99421 -89.4568,-11.99421 -58.4718,0 -105.4492,16.9918 -46.9773,16.99181 -79.9614,49.47615 -32.9841,31.98457 -50.4757,77.9624 -17.4915,45.47807 -17.4915,102.95035 0,80.4612 33.9836,136.43421 34.4833,55.97301 93.9547,84.95903 59.971,28.48627 136.9339,28.48627 35.4829,0 64.9687,-6.49687 29.4858,-6.99663 48.9764,-15.49253 V 743.57115 h -153.426 V 637.62224 h 268.8703 v 336.83757 q -28.986,17.99132 -70.9658,31.48479 -41.48,13.4935 -85.9585,20.4901 -43.9788,6.9967 -79.4617,6.9967 z"
+     id="text18"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,732.55421,2.2705332)"
+     aria-label="G" />
+  <path
+     d="M 3089.7855,1018.4386 V 318.77599 h 270.8693 q 74.4641,0 129.4376,25.48771 54.9735,24.98795 84.9591,71.9653 29.9855,46.97735 29.9855,111.94602 0,51.97493 -21.4896,91.45589 -21.4897,39.48097 -59.4714,65.46843 -37.4819,25.98747 -86.958,36.48241 l 203.4019,296.85685 H 3484.5951 L 3303.6823,744.57067 h -83.9595 V 1018.4386 Z M 3219.7228,638.122 h 121.9412 q 62.4699,0 97.453,-25.98747 34.9831,-26.48723 34.9831,-76.96289 0,-52.47469 -31.9845,-79.96144 -31.9846,-27.48674 -93.9547,-27.48674 h -128.4381 z"
+     id="text17"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,629.13462,2.2705332)"
+     aria-label="R" />
+  <path
+     d="m 4083.0129,1033.4314 q -79.4617,0 -147.4289,-27.4868 -67.4675,-27.98648 -117.4434,-77.46262 -49.9759,-49.47614 -77.4627,-115.94409 -27.4867,-66.46795 -27.4867,-143.93059 0,-77.96241 27.4867,-144.43036 27.4868,-66.46794 77.4627,-115.94408 49.9759,-49.47614 117.4434,-76.96289 67.9672,-27.48675 147.4289,-27.48675 78.9619,0 146.4294,27.98651 67.4674,27.9865 117.4433,77.9624 49.9759,49.9759 77.9624,116.44385 27.9865,65.96819 27.9865,142.43132 0,77.46264 -27.9865,143.93059 -27.9865,66.46795 -77.9624,115.94409 -49.9759,49.47614 -117.4433,77.46262 -67.4675,27.4868 -146.4294,27.4868 z m 0,-122.44099 q 49.4761,0 91.9556,-16.9918 42.9793,-17.49157 74.4641,-48.97639 31.9846,-31.98457 49.4762,-76.46312 17.9913,-44.97831 17.9913,-99.9518 0,-73.46458 -30.9851,-127.93831 -30.985,-54.47373 -83.9595,-84.45927 -52.9744,-29.98554 -118.9426,-29.98554 -49.9759,0 -92.4555,16.99181 -42.4795,16.9918 -74.464,48.97638 -31.4849,31.98457 -49.4762,76.46313 -17.4916,44.47855 -17.4916,99.9518 0,73.46457 30.4853,127.9383 30.9851,54.47373 83.9596,84.45927 52.9744,29.98554 119.4424,29.98554 z"
+     id="text16"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,624.72344,2.2705332)"
+     aria-label="O" />
+  <path
+     d="m 4874.838,1033.4314 q -94.9542,0 -159.4231,-38.48147 -63.9691,-38.48145 -96.4535,-104.44964 -32.4843,-66.46794 -32.4843,-149.9277 v -421.7966 h 129.9373 v 423.29588 q 0,84.95903 42.4795,126.93879 42.4796,41.97975 115.9441,41.97975 73.4646,0 115.4444,-41.97975 42.4795,-41.97976 42.4795,-126.93879 V 318.77599 h 130.4371 v 421.7966 q 0,83.45976 -32.4844,149.9277 -32.4843,65.96819 -96.4534,104.44964 -63.9692,38.48147 -159.4232,38.48147 z"
+     id="text15"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,559.30652,2.2705332)"
+     aria-label="U" />
+  <path
+     d="M 5340.8206,1018.4386 V 318.77599 h 262.3735 q 75.4636,0 133.9354,26.48723 58.4718,25.98747 91.4559,75.46361 33.4839,49.47614 33.4839,118.94264 0,70.46602 -30.9851,119.44241 -30.4853,48.97638 -88.9571,74.96385 -58.4718,25.48771 -141.9316,25.48771 H 5470.758 V 1018.4386 Z M 5470.758,649.1167 h 128.9378 q 62.4699,0 97.453,-25.98747 34.9831,-25.98747 34.9831,-80.96096 0,-54.97349 -35.9826,-82.46024 -35.4829,-27.9865 -95.454,-27.9865 H 5470.758 Z"
+     id="text14"
+     style="font-size:999.518px;font-family:Geologica;-inkscape-font-specification:'Geologica, @wght=500';font-variation-settings:'wght' 500;letter-spacing:5.20579px;white-space:pre;inline-size:5078.94;fill:#ffffff;stroke-width:123.627;stroke-linejoin:round"
+     transform="matrix(1.0005654,0,0,0.9994349,449.88566,2.2705332)"
+     aria-label="P" />
   <path
      id="rect11"
      style="font-variation-settings:'wght' 500;opacity:1;fill:#016391;fill-opacity:1;stroke-width:24.1968;stroke-linejoin:round"

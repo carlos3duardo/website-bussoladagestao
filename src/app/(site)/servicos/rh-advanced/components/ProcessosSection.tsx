@@ -89,9 +89,6 @@ export function ProcessosSection() {
             <PageSection.Headline className="max-w-[720px] text-center text-balance">
               Gestão de Pessoas em 8 processos
             </PageSection.Headline>
-            <PageSection.Description className="w-full max-w-[960px] text-center text-balance">
-              São processos chave para 
-            </PageSection.Description>
           </div>
         </header>
 
