@@ -164,7 +164,7 @@ export function Depoimentos() {
         <header className="flex flex-col items-center gap-4 px-4">
           <HomeSection.Label>Depoimentos</HomeSection.Label>
           <div className="flex flex-col items-center gap-4">
-            <HomeSection.Headline className="text-center">
+            <HomeSection.Headline className="text-center text-balance">
               O que as pessoas falam de nós
             </HomeSection.Headline>
             <HomeSection.Description className="w-full max-w-[600px] text-center">

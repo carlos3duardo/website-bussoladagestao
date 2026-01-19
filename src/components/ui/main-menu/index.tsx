@@ -9,37 +9,31 @@ import Link from 'next/link';
 const menu = [
   {
     title: 'Quem somos',
-    href: '#',
+    href: '/quem-somos',
     target: '_self',
     layout: 'default',
   },
   {
     title: 'Produtos',
-    href: '#',
+    href: '/produtos',
     target: '_self',
     layout: 'default',
   },
   {
     title: 'Clientes',
-    href: '#',
-    target: '_self',
-    layout: 'default',
-  },
-  {
-    title: 'Cases',
-    href: '#',
+    href: '/clientes',
     target: '_self',
     layout: 'default',
   },
   {
     title: 'Contato',
-    href: '#',
+    href: '/contato',
     target: '_self',
     layout: 'default',
   },
   {
     title: 'Agende uma demonstração',
-    href: '#',
+    href: '/contato?assunto=demonstracao',
     target: '_self',
     layout: 'cta',
   },
