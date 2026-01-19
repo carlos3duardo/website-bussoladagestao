@@ -105,10 +105,10 @@ export function Footer() {
   return (
     <>
       <footer className="bg-dark text-sm text-white/60">
-        <div className="container mx-auto py-16">
-          <div className="flex flex-col md:flex-row md:justify-between">
+        <div className="container mx-auto px-8 py-16">
+          <div className="flex flex-col gap-12 md:flex-row md:justify-between">
             <div data-slot="company" className="md:max-w-[360px]">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col items-center gap-4 md:items-start">
                 <figure>
                   <Image
                     src="/images/logotipo-darkmode.png"
@@ -118,7 +118,7 @@ export function Footer() {
                     className="h-[60px] w-[162px]"
                   />
                 </figure>
-                <p className="text-base">
+                <p className="w-3/4 text-center text-base md:w-full md:text-left">
                   Temos o objetivo de fortalecer a sua gestão e impulsionar o
                   crescimento de seu negócio para alcançar seus objetivos.
                 </p>
@@ -147,7 +147,7 @@ export function Footer() {
             <div data-slot="menu">
               <ul className="grid gap-8 lg:grid-cols-3">
                 {navigationMenu.map((nav) => (
-                  <li key={nav.title} className="">
+                  <li key={nav.title} className="text-center md:text-left">
                     <h4 className="text-base font-bold">{nav.title}</h4>
                     <ul>
                       {nav.menu.map((item) => (
