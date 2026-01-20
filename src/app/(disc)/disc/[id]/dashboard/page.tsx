@@ -46,7 +46,6 @@ export default async function Page({ params, searchParams }: PageProps) {
           <h1 className="text-xl font-semibold">
             Olá, {firstName({ fullName: testeDisc.usuario, ucfirst: true })}.
           </h1>
-          <pre>{JSON.stringify(testeDisc, null, 2)}</pre>
 
           <DashboardHeader inscricaoId={id} />
 
