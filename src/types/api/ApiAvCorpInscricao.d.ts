@@ -18,7 +18,7 @@ export interface ApiAvCorpInscricao {
   whatsapp: string | null;
   empresa: {
     id: string | null;
-    nome: string;
+    nome_fantasia: string;
     colaboradores: string | null;
     area_atuacao: string | null;
   };
