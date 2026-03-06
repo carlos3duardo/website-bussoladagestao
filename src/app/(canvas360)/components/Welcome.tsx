@@ -25,7 +25,7 @@ export function Welcome({ inscricao }: WelcomeProps) {
 
     const data = {
       inscricao_id: inscricao.id,
-      nome: `Avaliação solicitada pelo site. Empresa: ${inscricao.empresa.nome}.`,
+      nome: `Avaliação solicitada pelo site. Empresa: ${inscricao.empresa.nome_fantasia}.`,
     };
 
     axios
@@ -39,7 +39,7 @@ export function Welcome({ inscricao }: WelcomeProps) {
       .finally(() => {
         setSubmitting(false);
       });
-  }, [inscricao.empresa.nome, inscricao.id]);
+  }, [inscricao.empresa.nome_fantasia, inscricao.id]);
 
   return (
     <div className="grid gap-4 lg:grid-cols-2 lg:gap-8">
