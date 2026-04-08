@@ -4,7 +4,7 @@ import './animations.css';
 import type { Metadata } from 'next';
 import { Inter, Rubik } from 'next/font/google';
 
-import { Footer, Header } from '@/components';
+import { FacebookPixel, Footer, Header } from '@/components';
 import { ScreenSizeViewer } from '@/components/ui';
 import { SiteProvider } from '@/providers';
 
@@ -81,6 +81,7 @@ export default function RootLayout({
           </div>
           <ScreenSizeViewer />
         </SiteProvider>
+        <FacebookPixel />
       </body>
     </html>
   );
