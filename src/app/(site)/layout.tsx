@@ -1,10 +1,11 @@
 import './../globals.css';
 import './animations.css';
 
+import { GoogleTagManager } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 import { Inter, Rubik } from 'next/font/google';
 
-import { Footer, Header } from '@/components';
+import { FacebookPixel, Footer, Header } from '@/components';
 import { ScreenSizeViewer } from '@/components/ui';
 import { SiteProvider } from '@/providers';
 
@@ -81,7 +82,11 @@ export default function RootLayout({
           </div>
           <ScreenSizeViewer />
         </SiteProvider>
+        <FacebookPixel />
       </body>
+      <GoogleTagManager
+        gtmId={process.env.NEXT_PUBLIC_GOOGLE_TAG_MANAGER_ID as string}
+      />
     </html>
   );
 }
