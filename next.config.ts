@@ -8,6 +8,10 @@ const nextConfig: NextConfig = {
         hostname: 'images.unsplash.com',
       },
       {
+        protocol: 'https',
+        hostname: 'api.bussoladagestao.com.br',
+      },
+      {
         protocol: 'http',
         hostname: 'jarvis.localhost',
       },
