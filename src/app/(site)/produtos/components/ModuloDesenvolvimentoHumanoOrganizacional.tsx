@@ -15,14 +15,13 @@ export function ModuloDesenvolvimentoHumanoOrganizacional() {
               Módulo de Avaliação de Desempenho do Colaborador
             </PageSection.Headline>
             <PageSection.Paragraph className="text-left text-lg">
-              Nosso módulo de Avaliação da Maturidade é a ferramente ideal para
-              empresas que buscam evoluir sua gestão, alinhando tecnologia,
-              inovação e resultados.
+              Com reursos como Avaliação de Desempenho, feedbacks contínuos,
+              Matriz 9Box, avaliação de experiência, análise de engajamento e
+              Planos de Desenvolvimento Individual (PDI), este módulo garante
+              uma gestão baseada em dados e direcionada à evolução de talentos.
               <br />
-              Através de uma de suas avaliações de diagnósticos, é possível
-              identificar setores críticos e oportunidades de melhoria,
-              permitindo uma gestão mais eficiente e com foco na evolução da
-              maturidade organizacional.
+              Além disso, os relatórios em tempo real faciliram decisões
+              estratégicas sobre promoções, treinamentos e realocações.
             </PageSection.Paragraph>
             <h3 className="text-xl font-semibold lg:text-left">
               Principais recursos
@@ -33,11 +32,12 @@ export function ModuloDesenvolvimentoHumanoOrganizacional() {
                   <Compass size={18} className="text-primary-500" />
                 </figure>
                 <div>
-                  <strong>Avaliação Organizacional do MEG21</strong>
+                  <strong>Avaliação de Desempenho</strong>
                   <br />
-                  Permite medir a maturidade da gestão com base nos fundamentos
-                  do Modelo de Excelência da Gestão, identificando forças e
-                  oportinidades para melhoria.
+                  Tem como objetivo analisar o desempenho individual ou de um
+                  grupo de funcionários. Por meio desse processo, o líder pode
+                  diagnosticar e analisar o comportamento de um colaborador
+                  durante um período de tempo determinado.
                 </div>
               </li>
               <li className="flex items-start gap-2">
@@ -45,11 +45,10 @@ export function ModuloDesenvolvimentoHumanoOrganizacional() {
                   <Compass size={18} className="text-primary-500" />
                 </figure>
                 <div>
-                  <strong>Diagnóstico Empresarial</strong>
+                  <strong>Fábrica de Ideias</strong>
                   <br />
-                  Avaliação rápida e objetiva da empresa utilizando metodologia
-                  baseada no Business Model Canvas (BMC), identificando pontos
-                  fortes e fracos
+                  Na fábrica de ideias o colaborador poderá registrar suas
+                  ideias para serem analisadas e implementadas na empresa.
                 </div>
               </li>
               <li className="flex items-start gap-2">
@@ -57,10 +56,10 @@ export function ModuloDesenvolvimentoHumanoOrganizacional() {
                   <Compass size={18} className="text-primary-500" />
                 </figure>
                 <div>
-                  <strong>Criação de planos de ação no formato 5W2H</strong>
+                  <strong>Teste de Engajamento</strong>
                   <br />
-                  Organização e acompanhamento de estratégias e tarefas com
-                  prazos, responsáveis e prioridades definidas
+                  São pesquisas com o objetivo de avaliar líderes, com perguntas
+                  para identificar o nível de engajamento de seus liderados.
                 </div>
               </li>
             </ul>

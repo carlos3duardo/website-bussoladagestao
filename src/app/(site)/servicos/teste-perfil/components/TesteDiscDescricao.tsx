@@ -132,8 +132,8 @@ export function TesteDiscDescricao() {
               <br />
               <br />
               De posse dessas informações, os gestores podem identificar e
-              entender entenderem melhor seus comportamentos, aprimorar o
-              trabalho em equipe e otimizar a gestão de pessoas.
+              entender melhor seus comportamentos, aprimorar o trabalho em
+              equipe e otimizar a gestão de pessoas.
             </PageSection.Description>
           </div>
         </header>
