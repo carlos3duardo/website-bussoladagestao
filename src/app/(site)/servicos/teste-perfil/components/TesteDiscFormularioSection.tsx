@@ -237,7 +237,7 @@ export function TesteDiscFormularioSection() {
                     Recebemos sua requisição com sucesso!
                   </h4>
                   <p className="text-center text-balance">
-                    Enviamos um link para que você possa acompnar a realização
+                    Enviamos um link para que você possa acompanhar a realização
                     dos testes DISC dos seus colaboradores.
                   </p>
                   <p className="text-center text-balance">
