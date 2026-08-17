@@ -19,7 +19,7 @@ export async function POST(req: Request) {
   try {
     const accessToken = await getApiClientAccessToken();
 
-    axios({
+    await axios({
       baseURL: API_URL,
       url: `/trial/disc/${inscricaoId}/usuario/${usuarioId}/responder`,
       method: 'post',

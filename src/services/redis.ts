@@ -1,10 +1,21 @@
-// import Redis from 'ioredis';
-import { createClient } from 'redis';
+import 'server-only';
 
-// const redis = new Redis(process.env.REDIS_URL || 'redis://localhost:6379');
+import { createClient, type RedisClientType } from 'redis';
 
-const redis = await createClient({
-  url: process.env.REDIS_V2_REDIS_URL,
-}).connect();
+let client: RedisClientType | null = null;
+let connectingPromise: Promise<RedisClientType> | null = null;
 
-export default redis;
+async function getRedisClient(): Promise<RedisClientType> {
+  if (client) return client;
+
+  if (!connectingPromise) {
+    connectingPromise = createClient({
+      url: process.env.REDIS_V2_REDIS_URL,
+    }).connect() as Promise<RedisClientType>;
+  }
+
+  client = await connectingPromise;
+  return client;
+}
+
+export default getRedisClient;

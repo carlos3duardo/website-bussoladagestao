@@ -1,8 +1,8 @@
+// useResultadoAvaliacaoCanvas360.ts
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 import { useRef } from 'react';
 
-import { getApiClientAccessToken } from '@/lib/api/accessToken';
 import { ApiAvCorpAvaliacaoProps } from '@/types';
 
 interface HookProps {
@@ -19,16 +19,11 @@ export function useResultadoAvaliacaoCanvas360({
   const { isLoading, isSuccess, isError, error, data } = useQuery({
     queryKey: ['resultado-avcorp-canvas360', avaliacaoId],
     queryFn: async () => {
-      const accessToken = await getApiClientAccessToken();
-
       const response = await axios.get(
         `/api/trial/avcorp/canvas360/avaliacao/${avaliacaoId}`,
         {
           params: {
             with: 'resultado,analise',
-          },
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
           },
         },
       );
@@ -39,17 +34,11 @@ export function useResultadoAvaliacaoCanvas360({
       const analise = query.state.data?.analise;
       const tempoDecorrido = Date.now() - startedAtRef.current;
 
-      console.log({
-        analise,
-        timeout,
-        tempoDecorrido,
-      });
-
       if (analise || tempoDecorrido >= timeout * 1000) {
         return false;
       }
 
-      return 1000 * 5; // 5s
+      return 1000 * 5;
     },
   });
 

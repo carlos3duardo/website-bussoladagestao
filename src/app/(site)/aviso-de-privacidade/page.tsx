@@ -21,7 +21,7 @@ export default function Page() {
           PRIVACIDADE&quot;, voltado para os clientes e ao público em geral, os
           detalhes sobre a obtenção e utilização dos dados pessoais deixados
           pelo Titular ou coletados automaticamente na utilização dos diversos
-          sites e serviços da Bússola da Gestão.
+          sites, aplicativos e serviços da Bússola da Gestão.
         </p>
 
         <p className="my-8 text-justify indent-12">
@@ -50,8 +50,8 @@ export default function Page() {
           <li>
             <strong>Dados pessoais:</strong> Qualquer informação relacionada a
             pessoa natural identificada ou identificável. Tendo como exemplos:
-            Nome, sobrenome, estado civil, local e data de nascimento, cargo,
-            e-mail, telefone e outros.
+            Nome, sobrenome, CPF, data de nascimento, cargo, e-mail, telefone,
+            foto do perfil e outros.
           </li>
           <li>
             <strong>Dados pessoais sensívels:</strong> São os dados pessoais
@@ -308,13 +308,24 @@ export default function Page() {
         </ul>
 
         <h2 className="my-8 indent-12 text-3xl font-bold">
-          7. Transferência internacional de dados
+          7. Transferência e dados e manutenção de dados
         </h2>
 
         <p className="my-8 text-justify indent-12">
           Os dados pessoais podem ser transferidos para outros países por
           empresas parceiras ou fornecedores da Bússola da Gestão que hospedam
           dados no exterior, respeitando a legislação e/ou regulação vigentes.
+        </p>
+
+        <p className="my-8 text-justify indent-12">
+          Todos os dados são transferidos de forma criptografada via protocolo
+          HTTPS, e ficam guardados em segurança.
+        </p>
+
+        <p className="my-8 text-justify indent-12">
+          O recurso de realizar login usando biometria é realizado apenas no
+          aparelho do usuário. Nós não coletamos ou armazenamos dados
+          biometricos.
         </p>
 
         <h2 className="my-8 indent-12 text-3xl font-bold">

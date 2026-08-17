@@ -1,3 +1,3 @@
-import redis from './redis';
+import getRedisClient from './redis';
 
-export { redis };
+export { getRedisClient };

@@ -2,7 +2,7 @@ import axios, { isAxiosError } from 'axios';
 
 import { API_URL } from '@/config/app';
 import { getApiClientAccessToken } from '@/lib/api/accessToken';
-import { HttpStatus } from '@/lib/consts';
+import { AvCorpModeloId, HttpStatus } from '@/lib/consts';
 
 type InscricaoProps = {
   nome: string;
@@ -28,7 +28,10 @@ export async function POST(req: Request) {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${accessToken}`,
       },
-      data,
+      data: {
+        ...data,
+        modelo_id: AvCorpModeloId.CANVAS360,
+      },
     });
 
     return Response.json(

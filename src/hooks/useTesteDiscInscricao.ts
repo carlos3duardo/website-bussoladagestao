@@ -1,7 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-import { getApiClientAccessToken } from '@/lib/api/accessToken';
 import { ApiTesteDiscInscricao } from '@/types';
 
 interface HookProps {
@@ -16,13 +15,7 @@ export function useTesteDiscInscricao({
   const { isLoading, isSuccess, isError, error, data } = useQuery({
     queryKey: ['resultado-teste-disc-usuario', inscricaoId],
     queryFn: async () => {
-      const accessToken = await getApiClientAccessToken();
-
-      const response = await axios.get(`/api/trial/disc/${inscricaoId}`, {
-        headers: {
-          Authorization: `Bearer ${accessToken}`,
-        },
-      });
+      const response = await axios.get(`/api/trial/disc/${inscricaoId}`);
 
       return response.data as unknown as ApiTesteDiscInscricao;
     },
