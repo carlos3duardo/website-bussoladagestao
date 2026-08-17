@@ -1,4 +1,4 @@
-'use server';
+import 'server-only';
 
 import axios from 'axios';
 import * as jose from 'jose';
@@ -11,9 +11,11 @@ import {
   USER_AGENT,
 } from '@/config/app';
 import { AuthError } from '@/errors';
-import { redis } from '@/services';
+import { getRedisClient } from '@/services';
 
 export async function getApiClientAccessToken(): Promise<string> {
+  const redis = await getRedisClient();
+
   const cachedToken = await redis.get(REDIS_KEY);
 
   if (cachedToken) {

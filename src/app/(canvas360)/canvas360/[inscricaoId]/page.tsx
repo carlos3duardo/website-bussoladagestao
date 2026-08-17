@@ -15,10 +15,14 @@ interface PageProps {
 export default async function Page({ params }: PageProps) {
   const { inscricaoId } = await params;
 
+  console.log({ inscricaoId });
+
   const inscricao = await getAvCorpInscricao({
     id: inscricaoId,
     relationships: ['avaliacoes'],
   });
+
+  console.log({ inscricao });
 
   const isExpired = inscricao.validade
     ? new Date(inscricao.validade) < new Date()
