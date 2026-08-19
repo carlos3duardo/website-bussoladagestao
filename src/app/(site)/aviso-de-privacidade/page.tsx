@@ -405,7 +405,7 @@ export default function Page() {
         </p>
 
         <p className="my-8 text-center text-sm opacity-80">
-          Atualizado em 20/08/2025
+          Atualizado em 18/08/2026
         </p>
       </div>
     </main>
