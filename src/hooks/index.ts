@@ -1,3 +1,2 @@
-import { useTesteDiscInscricao } from './useTesteDiscInscricao';
-
-export { useTesteDiscInscricao };
+export { useQueryParams } from './useQueryParams';
+export { useTesteDiscInscricao } from './useTesteDiscInscricao';

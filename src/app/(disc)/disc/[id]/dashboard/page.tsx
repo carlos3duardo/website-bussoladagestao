@@ -5,8 +5,8 @@ import { firstName } from '@/lib/helpers';
 
 import { DashboardHeader } from './components/DashboardHeader';
 import { Error } from './components/Error';
-import { UsuarioTabela } from './components/UsuarioTabela';
 import { Expirado } from './components/Expirado';
+import { UsuarioTabela } from './components/UsuarioTabela';
 
 export const metadata: Metadata = {
   title: 'Teste DISC',

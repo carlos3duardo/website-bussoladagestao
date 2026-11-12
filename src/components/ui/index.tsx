@@ -1,7 +1,7 @@
 import { Button } from './Button';
 import { Card } from './Card';
 import { CtaButton } from './CtaButton';
-import { DataTable } from './DataTable';
+import { DataTable } from './datatable';
 import { Dialog } from './Dialog';
 import { HomeSection } from './home-section';
 import { InstagramPost } from './InstagramPost';

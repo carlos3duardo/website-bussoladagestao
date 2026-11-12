@@ -17,7 +17,7 @@ const Success = Swal.mixin({
     actions: styles.actions,
     confirmButton: twMerge(
       styles.baseButton,
-      'bg-primary text-primary-foreground hover:bg-primary/90',
+      'text-white bg-primary-400 ring-1 ring-primary-400 hover:bg-primary-500 hover:ring-2 hover:ring-primary-500 cursor-pointer',
     ),
     cancelButton: twMerge(
       styles.baseButton,
